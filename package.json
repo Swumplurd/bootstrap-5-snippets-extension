@@ -1,0 +1,21 @@
+{
+    "name": "bootstrap-5-snippets-extension",
+    "displayName": "bootstrap-5-snippet-extension",
+    "publisher": "swumplurd",
+    "description": "A lot of bootstrap 5 snippets",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
