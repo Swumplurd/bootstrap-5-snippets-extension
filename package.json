@@ -12,7 +12,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/Swumplurd/bootstrap-5-snippets-extension"
+        "url": "https://dev.azure.com/swumplurd-inc/bootstrap-5-snippet-extension/_git/bootstrap-5-snippet-extension"
     },
     "contributes": {
         "snippets": [
