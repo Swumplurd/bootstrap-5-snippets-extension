@@ -164,6 +164,10 @@ It is necessary to add customization and utility of some snippets.
 
 ## Release Notes
 
+### 1.0.1
+
+Added support for Javascript(JSX) and PHP.
+
 ### 1.0.0
 
 Added more than 150 useful Bootstrap 5 snippets.

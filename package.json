@@ -1,9 +1,21 @@
 {
     "name": "bootstrap-5-snippets-extension",
-    "displayName": "bootstrap-5-snippet-extension",
+    "displayName": "Bootstrap 5 Snippet Extension",
     "publisher": "swumplurd",
-    "description": "A lot of bootstrap 5 snippets",
-    "version": "1.0.0",
+    "description": "A lot of bootstrap 5 snippets 😀",
+    "version": "1.0.1",
+    "icon": "images/extension-icon.png",
+    "keywords": [
+        "bootstrap",
+        "html",
+        "js",
+        "javascript",
+        "jsx",
+        "php",
+        "languages",
+        "snippets",
+        "web"
+    ],
     "engines": {
         "vscode": "^1.59.0"
     },
@@ -18,6 +30,14 @@
         "snippets": [
             {
                 "language": "html",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets-js.code-snippets"
+            },
+            {
+                "language": "php",
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
