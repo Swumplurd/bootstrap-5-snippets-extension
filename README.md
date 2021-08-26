@@ -4,7 +4,6 @@
 ![modal snippet](images/modal.gif)
 
 ---
-
 ## Features
 
 More than **150** useful Bootstrap 5 snippets added.
