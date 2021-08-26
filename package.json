@@ -3,13 +3,17 @@
     "displayName": "bootstrap-5-snippet-extension",
     "publisher": "swumplurd",
     "description": "A lot of bootstrap 5 snippets",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.59.0"
     },
     "categories": [
         "Snippets"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Swumplurd/bootstrap-5-snippets-extension"
+    },
     "contributes": {
         "snippets": [
             {
