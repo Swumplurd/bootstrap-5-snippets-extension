@@ -164,14 +164,19 @@ It is necessary to add customization and utility of some snippets.
 
 ## Release Notes
 
+---
+### 1.2.0
+- "\<hr\>" tag closed for Javascript (JSX)
+- "style" porpierty fixed for Javascript (JSX)
+- Breadcrumb Divider snippet removed for Javascript (JSX)
+- Card Grid Snippet indentation fixed
+
+---
 ### 1.0.1
-
-Added support for Javascript(JSX) and PHP.
-
+- Added support for Javascript(JSX) and PHP.
+---
 ### 1.0.0
-
-Added more than 150 useful Bootstrap 5 snippets.
-
+- Added more than 150 useful Bootstrap 5 snippets.
 ---
 
 ### For more information
