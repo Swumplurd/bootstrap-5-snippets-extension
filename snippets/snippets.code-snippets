@@ -1146,7 +1146,7 @@
     "Bootstrap 5 Buttons": {
         "prefix": "b5-button",
         "body": [
-            "<button type=\"button\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\">Button</button>"
+            "<button type=\"button\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\">${2:Button}</button>"
         ],
         "description": "b5-button"
     },

@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- functionality added to b5-button snippet
 
 ---
 
