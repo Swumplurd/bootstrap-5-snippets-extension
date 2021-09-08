@@ -1,11 +1,16 @@
 # Changelog
 
 ## [Unreleased]
-### Added
-- functionality added to b5-button snippet
 
 ---
 
+## [1.3.0]  - 2021-08-28
+### Added
+- functionality added to b5-button snippet
+- support for TSX
+
+### Fixed
+- snippets for `.jsx` files
 ## [1.2.0]  - 2021-08-28
 ### Fixed
 - hr tag close for Javascript (JSX)

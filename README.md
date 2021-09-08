@@ -165,6 +165,10 @@ It is necessary to add customization and utility of some snippets.
 ## Release Notes
 
 ---
+### 1.3.0
+- Added Suport in `.jsx` and `.tsx` files
+
+---
 ### 1.2.0
 - "\<hr\>" tag closed for Javascript (JSX)
 - "style" porpierty fixed for Javascript (JSX)
