@@ -163,7 +163,7 @@
     "Bootstrap 5 Image Fluid": {
         "prefix": "b5-img-fluid",
         "body": [
-            "img.img-fluid(src=\"${1:https://dummyimage.com/800x300/dddddd/fff.png&text=Responsive+Image}\",alt=\"${2:...}\")"
+            "img.img-fluid(src=\"${1:https://dummyimage.com/800x300/dddddd/fff.png&text=Responsive+Image}\", alt=\"${2:...}\")"
         ],
         "description": "b5-image-fluid"
     },
@@ -213,8 +213,8 @@
         "prefix": "b5-form-disable",
         "body": [
             ".mb-3",
-                "\t<label for=\"${2:disabledInput}\" class=\"form-label ${1:Some text}",
-                "\t<input class=\"form-control\" id=\"${2:disabledInput}\" type=\"text\" placeholder=\"${3:Disabled input here...}\" disabled>",
+                "\tlabel.form-label(for=\"${2:disabledInput}\") ${1:Some text}",
+                "\tinput.form-control#${2:disabledInput}(type=\"text\", placeholder=\"${3:Disabled input here...}\", disabled)",
         ],
         "description": "b5-form-disable"
     },
@@ -223,8 +223,8 @@
         "prefix": "b5-form-readonly",
         "body": [
             ".mb-3",
-                "\t<label class=\"form-label ${1:Some text}",
-                "\t<input class=\"form-control\" type=\"text\" placeholder=\"${2:Readonly input here...}\" aria-label=\"readonly input example\" readonly>",
+                "\tlabel.form-label ${1:Some text}",
+                "\tinput.form-control(type=\"text\", placeholder=\"${2:Readonly input here...}\", aria-label=\"readonly input example\", readonly)",
         ],
         "description": "b5-form-readonly"
     },
@@ -233,8 +233,8 @@
         "prefix": "b5-form-textarea",
         "body": [
             ".mb-3",
-                    "\t<label for=\"${2:exampleFormControlTextarea1}\" class=\"form-label ${1:Example textarea}",
-                    "\t<textarea class=\"form-control\" id=\"${2:exampleFormControlTextarea1}\" rows=\"${3:3}\"></textarea>",
+                    "\tlabel.form-label(for=\"${2:exampleFormControlTextarea1}\") ${1:Example textarea}",
+                    "\ttextarea.form-control#${2:exampleFormControlTextarea1}(rows=\"${3:3}\")",
         ],
         "description": "b5-form-textarea"
     },
@@ -243,8 +243,8 @@
         "prefix": "b5-form-file",
         "body": [
             ".mb-3",
-                "\t<label for=\"${2:formFile}\" class=\"form-label ${1:Default file input example}",
-                "\t<input class=\"form-control\" type=\"file\" id=\"${2:formFile}",
+                "\tlabel.form-label(for=\"${2:formFile}\") ${1:Default file input example}",
+                "\tinput.form-control#${2:formFile}(type=\"file\")",
         ],
         "description": "b5-form-file"
     },
@@ -252,8 +252,8 @@
     "Bootstrap 5 Color Picker": {
         "prefix": "b5-form-color",
         "body": [
-            "<label for=\"${2:exampleColorInput}\" class=\"form-label ${1:Color picker}",
-            "<input type=\"color\" class=\"form-control form-control-color mb-3\" id=\"${2:exampleColorInput}\" value=\"#563d7c\" title=\"${3:Choose your color}\">"
+            "label.form-label(for=\"${2:exampleColorInput}\") ${1:Color picker}",
+            "input.form-control.form-control-color.mb-3#${2:exampleColorInput}(type=\"color\", value=\"#563d7c\", title=\"${3:Choose your color}\")"
         ],
         "description": "b5-form-color"
     },
@@ -261,13 +261,12 @@
     "Bootstrap 5 Datalist": {
         "prefix": "b5-form-datalist",
         "body": [
-            "<label for=\"${2:exampleDataList}\" class=\"form-label ${1:Datalist example}",
-            "<input class=\"form-control mb-3\" list=\"${4:datalistOptions}\" id=\"${2:exampleDataList}\" placeholder=\"${3:Type to search...}",
-            "<datalist id=\"${4:datalistOptions}",
-                "\t<option value=\"${5:San Francisco}",
-                "\t<option value=\"${6:New York}",
-                "\t<option value=\"${7:Seattle}",
-            "</datalist>"
+            "label.form-label(for=\"${2:exampleDataList}\") ${1:Datalist example}",
+            "input.form-control.mb-3#${2:exampleDataList}(list=\"${4:datalistOptions}\", placeholder=\"${3:Type to search...}\")",
+            "datalist#${4:datalistOptions}",
+                "\toption(value=\"${5:San Francisco}\")",
+                "\toption(value=\"${6:New York}\")",
+                "\toption(value=\"${7:Seattle}\")",
         ],
         "description": "b5-form-datalist"
     },
@@ -275,12 +274,11 @@
     "Bootstrap 5 Select Default": {
         "prefix": "b5-select-default",
         "body": [
-            "<select class=\"form-select\" aria-label=\"Default select example",
-                "\t<option selected>${1:Open this select menu}</option>",
-                "\t<option value=\"1 ${2:One}</option>",
-                "\t<option value=\"2 ${3:Two}</option>",
-                "\t<option value=\"3 ${4:Three}</option>",
-            "</select>"
+            "select.form-select(aria-label=\"Default select example\")",
+                "\toption(selected) ${1:Open this select menu}",
+                "\toption(value=\"1\") ${2:One}",
+                "\toption(value=\"2\") ${3:Two}",
+                "\toption(value=\"3\") ${4:Three}",
         ],
         "description": "b5-select-default"
     },
@@ -288,12 +286,11 @@
     "Bootstrap 5 Select Size": {
         "prefix": "b5-select-size",
         "body": [
-            "<select class=\"form-select form-select-${1|sm,lg|}\" aria-label=\".form-select-${1|sm,lg|} example",
-                "\t<option selected>${2:Open this select menu}</option>",
-                "\t<option value=\"1 ${3:One}</option>",
-                "\t<option value=\"2 ${4:Two}</option>",
-                "\t<option value=\"3 ${5:Three}</option>",
-            "</select>"
+            "select class=\"form-select form-select-${1|sm,lg|}\" aria-label=\".form-select-${1|sm,lg|} example",
+                "\toption selected>${2:Open this select menu}",
+                "\toption value=\"1 ${3:One}",
+                "\toption value=\"2 ${4:Two}",
+                "\toption value=\"3 ${5:Three}",
         ],
         "description": "b5-select-size"
     },
@@ -301,12 +298,11 @@
     "Bootstrap 5 Select Multiple": {
         "prefix": "b5-select-multiple",
         "body": [
-            "<select class=\"form-select\" ${1|multiple,size=\"3\"|} aria-label=\"multiple select example",
-                "\t<option selected>${2:Open this select menu}</option>",
-                "\t<option value=\"1 ${3:One}</option>",
-                "\t<option value=\"2 ${4:Two}</option>",
-                "\t<option value=\"3 ${5:Three}</option>",
-            "</select>"
+            "select class=\"form-select\" ${1|multiple,size=\"3\"|} aria-label=\"multiple select example",
+                "\toption selected>${2:Open this select menu}",
+                "\toption value=\"1 ${3:One}",
+                "\toption value=\"2 ${4:Two}",
+                "\toption value=\"3 ${5:Three}",
         ],
         "description": "b5-select-multiple"
     },
@@ -314,12 +310,11 @@
     "Bootstrap 5 Select Disable": {
         "prefix": "b5-select-disable",
         "body": [
-            "<select class=\"form-select\" aria-label=\"Disabled select example\" disabled>",
-                "\t<option selected>${1:Open this select menu}</option>",
-                "\t<option value=\"1 ${2:One}</option>",
-                "\t<option value=\"2 ${3:Two}</option>",
-                "\t<option value=\"3 ${4:Three}</option>",
-            "</select>"
+            "select class=\"form-select\" aria-label=\"Disabled select example\" disabled>",
+                "\toption selected>${1:Open this select menu}",
+                "\toption value=\"1 ${2:One}",
+                "\toption value=\"2 ${3:Two}",
+                "\toption value=\"3 ${4:Three}",
         ],
         "description": "b5-select-disable"
     },
@@ -753,11 +748,11 @@
         "body": [
             ".input-group mb-3",
                 "\t<label class=\"input-group-text\" for=\"${1:inputGroupSelect01} ${2:Options}",
-                "\t<select class=\"form-select\" id=\"${1:inputGroupSelect01}",
-                    "\t\t<option selected>${3:Choose...}</option>",
-                    "\t\t<option value=\"1 ${4:One}</option>",
-                    "\t\t<option value=\"2 ${5:Two}</option>",
-                    "\t\t<option value=\"3 ${6:Three}</option>",
+                "\tselect class=\"form-select\" id=\"${1:inputGroupSelect01}",
+                    "\t\toption selected>${3:Choose...}",
+                    "\t\toption value=\"1 ${4:One}",
+                    "\t\toption value=\"2 ${5:Two}",
+                    "\t\toption value=\"3 ${6:Three}",
                 "\t</select>",
         ],
         "description": "b5-custom-select-label"
@@ -768,11 +763,11 @@
         "body": [
             ".input-group mb-3",
                 "\t<button class=\"btn btn-outline-secondary\" type=\"button ${1:Button}</button>",
-                "\t<select class=\"form-select\" id=\"${2:inputGroupSelect03}\" aria-label=\"${3:Example select with button addon}",
-                    "\t\t<option selected>${4:Choose...}</option>",
-                    "\t\t<option value=\"1 ${5:One}</option>",
-                    "\t\t<option value=\"2 ${6:Two}</option>",
-                    "\t\t<option value=\"3 ${7:Three}</option>",
+                "\tselect class=\"form-select\" id=\"${2:inputGroupSelect03}\" aria-label=\"${3:Example select with button addon}",
+                    "\t\toption selected>${4:Choose...}",
+                    "\t\toption value=\"1 ${5:One}",
+                    "\t\toption value=\"2 ${6:Two}",
+                    "\t\toption value=\"3 ${7:Three}",
                 "\t</select>",
         ],
         "description": "b5-custom-select-btn"
@@ -832,11 +827,11 @@
         "prefix": "b5-form-float-select",
         "body": [
             ".form-floating",
-                "\t<select class=\"form-select\" id=\"${1:floatingSelect}\" aria-label=\"${2:Floating label select example}",
-                    "\t\t<option selected>${3:Open this select menu}</option>",
-                    "\t\t<option value=\"1 ${4:One}</option>",
-                    "\t\t<option value=\"2 ${5:Two}</option>",
-                    "\t\t<option value=\"3 ${6:Three}</option>",
+                "\tselect class=\"form-select\" id=\"${1:floatingSelect}\" aria-label=\"${2:Floating label select example}",
+                    "\t\toption selected>${3:Open this select menu}",
+                    "\t\toption value=\"1 ${4:One}",
+                    "\t\toption value=\"2 ${5:Two}",
+                    "\t\toption value=\"3 ${6:Three}",
                 "\t</select>",
                 "\t<label for=\"${1:floatingSelect} ${7:Works with selects}",
         ],
