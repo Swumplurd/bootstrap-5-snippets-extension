@@ -16,7 +16,10 @@
         "php",
         "languages",
         "snippets",
-        "web"
+        "web",
+        "pugjs",
+        "pug",
+        "jade"
     ],
     "engines": {
         "vscode": "^1.59.0"
@@ -53,6 +56,10 @@
             {
                 "language": "php",
                 "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "jade",
+                "path": "./snippets/snippets-pugjs.code-snippets"
             }
         ]
     }

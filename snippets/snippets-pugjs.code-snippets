@@ -1,0 +1,2380 @@
+{
+    "Bootstrap 5 CDN": {
+        "prefix": "b5-$",
+        "body": [
+            "doctype html",
+            "html(lang=\"en\")",
+            "head",
+                "\tmeta(charset=\"utf-8\")",
+                "\tmeta(name=\"viewport\", content=\"width=device-width, initial-scale=1, shrink-to-fit=no\")",
+                "\tlink(href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css\", rel=\"stylesheet\", integrity=\"sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x\", crossorigin=\"anonymous\")",
+                "\ttitle ${1:Title}",
+            "body",
+                "\t$0",
+                "\tscript(src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js\", integrity=\"sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4\", crossorigin=\"anonymous\")",
+        ],
+        "description": "b5-$"
+    },
+
+    "Bootstrap 5 Grid Default": {
+        "prefix": "b5-grid-default",
+        "body": [
+            ".container",
+                "\t.row",
+                    "\t\t.col-${1|xs,sm,md,lg,xl,xxl|}-${2:1-12} ${3}",
+                    "\t\t${0}",
+        ],
+        "description": "b5-grid-default"
+    },
+
+    "Bootstrap 5 Container": {
+        "prefix": "b5-grid-container",
+        "body": [
+            "<div class=\"container-${1|sm,md,lg,xl,xxl|}\">",
+                "\t${0}",
+            "</div>"
+        ],
+        "description": "b5-grid-container"
+    },
+
+    "Bootstrap 5 Container Fluid": {
+        "prefix": "b5-grid-container-fluid",
+        "body": [
+            "<div class=\"container-fluid\">",
+                "\t${0}",
+            "</div>"
+        ],
+        "description": "b5-grid-container-fluid"
+    },
+
+    "Bootstrap 5 Row": {
+        "prefix": "b5-grid-row",
+        "body": [
+            "<div class=\"row\">",
+                "\t${0}",
+            "</div>"
+        ],
+        "description": "b5-grid-row"
+    },
+    
+    "Bootstrap 5 Column": {
+        "prefix": "b5-grid-col",
+        "body": [
+            "<div class=\"col\">",
+                "\t${0}",
+            "</div>"
+        ],
+        "description": "b5-grid-col"
+    },
+
+    "Bootstrap 5 Gutters": {
+        "prefix": "b5-gutters",
+        "body": [
+            "<div class=\"container\">",
+                "\t<div class=\"row g-${1|1,2,3,4,5|}\">",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${2:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${3:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${4:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${5:Custom column padding}</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-gutters"
+    },
+
+    "Bootstrap 5 Horizontal Gutters": {
+        "prefix": "b5-gutters-x",
+        "body": [
+            "<div class=\"container\">",
+                "\t<div class=\"row gx-${1|1,2,3,4,5|}\">",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${2:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${3:Custom column padding}</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-gutters-x"
+    },
+
+    "Bootstrap 5 Vertical Gutters": {
+        "prefix": "b5-gutters-y",
+        "body": [
+            "<div class=\"container\">",
+                "\t<div class=\"row gy-${1|1,2,3,4,5|}\">",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${2:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${3:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${4:Custom column padding}</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-6\">",
+                        "\t\t\t<div class=\"p-3 border bg-light\">${5:Custom column padding}</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-gutters-y"
+    },
+
+    "Bootstrap 5 Table Default": {
+        "prefix": "b5-table-default",
+        "body": [
+            "<table class=\"table\">",
+                "\t<thead>",
+                    "\t\t<tr>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                    "\t\t</tr>",
+                "\t</thead>",
+                "\t<tbody>",
+                    "\t\t<tr>",
+                        "\t\t\t<th scope=\"row\"></th>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                    "\t\t</tr>",
+                    "\t\t<tr>",
+                        "\t\t\t<th scope=\"row\"></th>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                    "\t\t</tr>",
+                "\t</tbody>",
+            "</table>"
+        ],
+        "description": "b5-table-default"
+    },
+
+    "Bootstrap 5 Table Custom": {
+        "prefix": "b5-table-custom",
+        "body": [
+            "<table class=\"table table-${1|primary,secondary,success,danger,warning,info,light,dark|} ${2:table-striped} ${3:table-hover} ${4|table-bordered,table-borderless|} ${5:table-sm} table-responsive-${6|sm,md,lg,xl,xxl|}\">",
+                "\t<thead>",
+                    "\t\t<tr>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                        "\t\t\t<th scope=\"col\"></th>",
+                    "\t\t</tr>",
+                "\t</thead>",
+                "\t<tbody>",
+                    "\t\t<tr>",
+                        "\t\t\t<th scope=\"row\"></th>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                    "\t\t</tr>",
+                    "\t\t<tr>",
+                        "\t\t\t<th scope=\"row\"></th>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                        "\t\t\t<td></td>",
+                    "\t\t</tr>",
+                "\t</tbody>",
+            "</table>"
+        ],
+        "description": "b5-table-custom"
+    },
+
+    "Bootstrap 5 Image Fluid": {
+        "prefix": "b5-img-fluid",
+        "body": [
+            "<img src=\"${1:https://dummyimage.com/800x300/dddddd/fff.png&text=Responsive+Image}\" class=\"img-fluid\" alt=\"${2:...}\">"
+        ],
+        "description": "b5-image-fluid"
+    },
+
+    "Bootstrap 5 Image Thumbnail": {
+        "prefix": "b5-img-thumbnail",
+        "body": [
+            "<img src=\"${1:https://dummyimage.com/200x200/dddddd/fff.png&text=200x200}\" class=\"img-thumbnail\" alt=\"${2:...}\">"
+        ],
+        "description": "b5-image-thumbnail"
+    },
+
+    "Bootstrap 5 Email Form": {
+        "prefix": "b5-form-email",
+        "body": [
+            "<div class=\"mb-3\">",
+                "\t<label for=\"${2:exampleInputEmail1}\" class=\"form-label\">${1:Email address}</label>",
+                "\t<input type=\"email\" class=\"form-control\" id=\"${2:exampleInputEmail1}\" aria-describedby=\"${3:emailHelp}\">",
+                "\t<div id=\"${3:emailHelp}\" class=\"form-text\">${4:We'll never share your email with anyone else.}</div>",
+            "</div>"
+        ],
+        "description": "b5-form-email"
+    },
+
+    "Bootstrap 5 Password Form": {
+        "prefix": "b5-form-pass",
+        "body": [
+            "<div class=\"mb-3\">",
+                "\t<label for=\"${2:exampleInputPassword1}\" class=\"form-label\">${1:Password}</label>",
+                "\t<input type=\"password\" class=\"form-control\" id=\"${2:exampleInputPassword1}\" aria-describedby=\"${3:passwordHelp}\">",
+                "\t<div id=\"${3:passwordHelp}\" class=\"form-text\">${4:We'll never share your password with anyone else.}</div>",
+            "</div>"
+        ],
+        "description": "b5-form-pass"
+    },
+
+    "Bootstrap 5 Text Form": {
+        "prefix": "b5-form-text",
+        "body": [
+            "<div class=\"mb-3\">",
+                "\t<label for=\"${2:exampleInputText1}\" class=\"form-label\">${1:Some text}</label>",
+                "\t<input type=\"text\" class=\"form-control\" id=\"${2:exampleInputText1}\" aria-describedby=\"${3:textHelp}\">",
+                "\t<div id=\"${3:textHelp}\" class=\"form-text\">${4:We'll never share your texts with anyone else.}</div>",
+            "</div>"
+        ],
+        "description": "b5-form-text"
+    },
+
+    "Bootstrap 5 Disabled Form": {
+        "prefix": "b5-form-disable",
+        "body": [
+            "<div class=\"mb-3\">",
+                "\t<label for=\"${2:disabledInput}\" class=\"form-label\">${1:Some text}</label>",
+                "\t<input class=\"form-control\" id=\"${2:disabledInput}\" type=\"text\" placeholder=\"${3:Disabled input here...}\" disabled>",
+            "</div>"
+        ],
+        "description": "b5-form-disable"
+    },
+
+    "Bootstrap 5 Readonly Form": {
+        "prefix": "b5-form-readonly",
+        "body": [
+            "<div class=\"mb-3\">",
+                "\t<label class=\"form-label\">${1:Some text}</label>",
+                "\t<input class=\"form-control\" type=\"text\" placeholder=\"${2:Readonly input here...}\" aria-label=\"readonly input example\" readonly>",
+            "</div>"
+        ],
+        "description": "b5-form-readonly"
+    },
+
+    "Bootstrap 5 Textarea Form": {
+        "prefix": "b5-form-textarea",
+        "body": [
+            "<div class=\"mb-3\">",
+                    "\t<label for=\"${2:exampleFormControlTextarea1}\" class=\"form-label\">${1:Example textarea}</label>",
+                    "\t<textarea class=\"form-control\" id=\"${2:exampleFormControlTextarea1}\" rows=\"${3:3}\"></textarea>",
+            "</div>"
+        ],
+        "description": "b5-form-textarea"
+    },
+
+    "Bootstrap 5 File Input": {
+        "prefix": "b5-form-file",
+        "body": [
+            "<div class=\"mb-3\">",
+                "\t<label for=\"${2:formFile}\" class=\"form-label\">${1:Default file input example}</label>",
+                "\t<input class=\"form-control\" type=\"file\" id=\"${2:formFile}\">",
+            "</div>"
+        ],
+        "description": "b5-form-file"
+    },
+
+    "Bootstrap 5 Color Picker": {
+        "prefix": "b5-form-color",
+        "body": [
+            "<label for=\"${2:exampleColorInput}\" class=\"form-label\">${1:Color picker}</label>",
+            "<input type=\"color\" class=\"form-control form-control-color mb-3\" id=\"${2:exampleColorInput}\" value=\"#563d7c\" title=\"${3:Choose your color}\">"
+        ],
+        "description": "b5-form-color"
+    },
+
+    "Bootstrap 5 Datalist": {
+        "prefix": "b5-form-datalist",
+        "body": [
+            "<label for=\"${2:exampleDataList}\" class=\"form-label\">${1:Datalist example}</label>",
+            "<input class=\"form-control mb-3\" list=\"${4:datalistOptions}\" id=\"${2:exampleDataList}\" placeholder=\"${3:Type to search...}\">",
+            "<datalist id=\"${4:datalistOptions}\">",
+                "\t<option value=\"${5:San Francisco}\">",
+                "\t<option value=\"${6:New York}\">",
+                "\t<option value=\"${7:Seattle}\">",
+            "</datalist>"
+        ],
+        "description": "b5-form-datalist"
+    },
+
+    "Bootstrap 5 Select Default": {
+        "prefix": "b5-select-default",
+        "body": [
+            "<select class=\"form-select\" aria-label=\"Default select example\">",
+                "\t<option selected>${1:Open this select menu}</option>",
+                "\t<option value=\"1\">${2:One}</option>",
+                "\t<option value=\"2\">${3:Two}</option>",
+                "\t<option value=\"3\">${4:Three}</option>",
+            "</select>"
+        ],
+        "description": "b5-select-default"
+    },
+
+    "Bootstrap 5 Select Size": {
+        "prefix": "b5-select-size",
+        "body": [
+            "<select class=\"form-select form-select-${1|sm,lg|}\" aria-label=\".form-select-${1|sm,lg|} example\">",
+                "\t<option selected>${2:Open this select menu}</option>",
+                "\t<option value=\"1\">${3:One}</option>",
+                "\t<option value=\"2\">${4:Two}</option>",
+                "\t<option value=\"3\">${5:Three}</option>",
+            "</select>"
+        ],
+        "description": "b5-select-size"
+    },
+
+    "Bootstrap 5 Select Multiple": {
+        "prefix": "b5-select-multiple",
+        "body": [
+            "<select class=\"form-select\" ${1|multiple,size=\"3\"|} aria-label=\"multiple select example\">",
+                "\t<option selected>${2:Open this select menu}</option>",
+                "\t<option value=\"1\">${3:One}</option>",
+                "\t<option value=\"2\">${4:Two}</option>",
+                "\t<option value=\"3\">${5:Three}</option>",
+            "</select>"
+        ],
+        "description": "b5-select-multiple"
+    },
+
+    "Bootstrap 5 Select Disable": {
+        "prefix": "b5-select-disable",
+        "body": [
+            "<select class=\"form-select\" aria-label=\"Disabled select example\" disabled>",
+                "\t<option selected>${1:Open this select menu}</option>",
+                "\t<option value=\"1\">${2:One}</option>",
+                "\t<option value=\"2\">${3:Two}</option>",
+                "\t<option value=\"3\">${4:Three}</option>",
+            "</select>"
+        ],
+        "description": "b5-select-disable"
+    },
+
+    "Bootstrap 5 Checkbox Default": {
+        "prefix": "b5-checkbox-default",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckDefault}\">",
+                "\t<label class=\"form-check-label\" for=\"${1:flexCheckDefault}\">",
+                    "\t\t${2:Default checkbox}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-checkbox-default"
+    },
+
+    "Bootstrap 5 Checkbox Default Checked": {
+        "prefix": "b5-checkbox-default-check",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${3:flexCheckChecked}\" checked>",
+                "\t<label class=\"form-check-label\" for=\"${3:flexCheckChecked}\">",
+                    "\t\t${4:Checked checkbox}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-checkbox-default-check"
+    },
+
+    "Bootstrap 5 Checkbox Indeterminate": {
+        "prefix": "b5-checkbox-indeterminate",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckIndeterminate}\">",
+                "\t<label class=\"form-check-label\" for=\"${1:flexCheckIndeterminate}\">",
+                    "\t\t${2:Indeterminate checkbox}",
+                "\t</label>",
+            "</div>",
+            "<!-- Javascript for indeterminate checkbox -->",
+            "<script>",
+                "\tvar checkbox = document.getElementById(\"${1:flexCheckIndeterminate}\");",
+                "\tcheckbox.indeterminate = true;",
+            "</script>"
+        ],
+        "description": "b5-checkbox-indeterminate"
+    },
+
+    "Bootstrap 5 Checkbox Disabled Unchecked": {
+        "prefix": "b5-checkbox-disable-uncheck",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckDisabled}\" disabled>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexCheckDisabled}\">",
+                    "\t\t${2:Disabled checkbox}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-checkbox-disable-uncheck"
+    },
+
+    "Bootstrap 5 Checkbox Disabled Checked": {
+        "prefix": "b5-checkbox-disable-check",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckCheckedDisabled}\" checked disabled>",
+                "\t<label class=\"form-check-label\" for=\"${31:flexCheckCheckedDisabled}\">",
+                    "\t\t${2:Disabled checked checkbox}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-checkbox-disable-check"
+    },
+
+    "Bootstrap 5 Radio Default": {
+        "prefix": "b5-radio-default",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"${2:flexRadioDefaultName}\" id=\"${1:flexRadioDefault}\">",
+                "\t<label class=\"form-check-label\" for=\"${1:flexRadioDefault}\">",
+                    "\t\t${3:Default radio}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-radio-default"
+    },
+
+    "Bootstrap 5 Radio Default Checked": {
+        "prefix": "b5-radio-default-check",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"${2:flexRadioDefaultName}\" id=\"${1:flexRadioDefault}\" checked>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexRadioDefault}\">",
+                    "\t\t${3:Default checked radio}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-radio-default-check"
+    },
+
+    "Bootstrap 5 Radio Disabled": {
+        "prefix": "b5-radio-disable",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"${2:flexRadioDisabledName}\" id=\"${1:flexRadioDisabled}\" disabled>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexRadioDisabled}\">",
+                    "\t\t${3:Disabled radio}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-radio-disable"
+    },
+
+    "Bootstrap 5 Radio Disabled Checked": {
+        "prefix": "b5-radio-disable-check",
+        "body": [
+            "<div class=\"form-check\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"${2:flexRadioDisabled}\" id=\"${1:flexRadioCheckedDisabled}\" checked disabled>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexRadioCheckedDisabled}\">",
+                    "\t\t${3:Disabled checked radio}",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-radio-disable-check"
+    },
+
+    "Bootstrap 5 Switch Default": {
+        "prefix": "b5-switch-default",
+        "body": [
+            "<div class=\"form-check form-switch\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:flexSwitchCheckDefault}\">",
+                "\t<label class=\"form-check-label\" for=\"${1:flexSwitchCheckDefault}\">${2:Default switch checkbox input}</label>",
+            "</div>"
+        ],
+        "description": "b5-switch-default"
+    },
+
+    "Bootstrap 5 Switch Checked": {
+        "prefix": "b5-switch-check",
+        "body": [
+            "<div class=\"form-check form-switch\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:flexSwitchCheckChecked}\" checked>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexSwitchCheckChecked}\">${2:Checked switch checkbox input}</label>",
+            "</div>"
+        ],
+        "description": "b5-switch-check"
+    },
+
+    "Bootstrap 5 Switch Disabled": {
+        "prefix": "b5-switch-disable",
+        "body": [
+            "<div class=\"form-check form-switch\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:flexSwitchCheckDisabled}\" disabled>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexSwitchCheckDisabled}\">${2:Disabled switch checkbox input}</label>",
+            "</div>"
+        ],
+        "description": "b5-switch-disable"
+    },
+
+    "Bootstrap 5 Switch Disabled Checked": {
+        "prefix": "b5-switch-disable-check",
+        "body": [
+            "<div class=\"form-check form-switch\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:flexSwitchCheckCheckedDisabled}\" checked disabled>",
+                "\t<label class=\"form-check-label\" for=\"${1:flexSwitchCheckCheckedDisabled}\">${2:Disabled checked switch checkbox input}</label>",
+            "</div>"
+        ],
+        "description": "b5-switch-disable-check"
+    },
+
+    "Bootstrap 5 Checkbox Inline": {
+        "prefix": "b5-checkbox-inline",
+        "body": [
+            "<div class=\"form-check form-check-inline\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:inlineCheckbox1}\" value=\"option1\">",
+                "\t<label class=\"form-check-label\" for=\"${1:inlineCheckbox1}\">${2:1}</label>",
+            "</div>",
+            "<div class=\"form-check form-check-inline\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${3:inlineCheckbox2}\" value=\"option2\">",
+                "\t<label class=\"form-check-label\" for=\"${3:inlineCheckbox2}\">${4:2}</label>",
+            "</div>",
+            "<div class=\"form-check form-check-inline\">",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${5:inlineCheckbox3}\" value=\"option3\" disabled>",
+                "\t<label class=\"form-check-label\" for=\"${5:inlineCheckbox3}\">${6:3 (disabled)}</label>",
+            "</div>"
+        ],
+        "description": "b5-checkbox-inline"
+    },
+
+    "Bootstrap 5 Radio Inline": {
+        "prefix": "b5-radio-inline",
+        "body": [
+            "<div class=\"form-check form-check-inline\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"inlineRadioOptions\" id=\"${1:inlineRadio1}\" value=\"option1\">",
+                "\t<label class=\"form-check-label\" for=\"${1:inlineRadio1}\">${2:1}</label>",
+            "</div>",
+            "<div class=\"form-check form-check-inline\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"inlineRadioOptions\" id=\"${3:inlineRadio2}\" value=\"option2\">",
+                "\t<label class=\"form-check-label\" for=\"${3:inlineRadio2}\">${4:2}</label>",
+            "</div>",
+            "<div class=\"form-check form-check-inline\">",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"inlineRadioOptions\" id=\"${5:inlineRadio3}\" value=\"option3\" disabled>",
+                "\t<label class=\"form-check-label\" for=\"${5:inlineRadio3}\">${6:3 (disabled)}</label>",
+            "</div>"
+        ],
+        "description": "b5-radio-inline"
+    },
+
+    "Bootstrap 5 Checkbox no Label": {
+        "prefix": "b5-checkbox-nolabel",
+        "body": [
+            "<div>",
+                "\t<input class=\"form-check-input\" type=\"checkbox\" id=\"${1:checkboxNoLabel}\" value=\"\" aria-label=\"...\">",
+            "</div>"
+        ],
+        "description": "b5-checkbox-nolabel"
+    },
+
+    "Bootstrap 5 Radio no Label": {
+        "prefix": "b5-radio-nolabel",
+        "body": [
+            "<div>",
+                "\t<input class=\"form-check-input\" type=\"radio\" name=\"radioNoLabel\" id=\"${1:radioNoLabel1}\" value=\"\" aria-label=\"...\">",
+            "</div>"
+        ],
+        "description": "b5-radio-nolabel"
+    },
+
+    "Bootstrap 5 Range": {
+        "prefix": "b5-range",
+        "body": [
+            "<label for=\"${1:customRange1}\" class=\"form-label\">${2:Example range}</label>",
+            "<input type=\"range\" class=\"form-range\" id=\"${1:customRange1}\">"
+        ],
+        "description": "b5-range"
+    },
+
+    "Bootstrap 5 Range Disable": {
+        "prefix": "b5-range-disable",
+        "body": [
+            "<label for=\"${1:disabledRange}\" class=\"form-label\">${2:Disabled range}</label>",
+            "<input type=\"range\" class=\"form-range\" id=\"${1:disabledRange}\" disabled>"
+        ],
+        "description": "b5-range-disable"
+    },
+
+    "Bootstrap 5 Range Min Max": {
+        "prefix": "b5-range-minmax",
+        "body": [
+            "<label for=\"${1:customRange2}\" class=\"form-label\">${2:Example range}</label>",
+            "<input type=\"range\" class=\"form-range\" min=\"${3:0}\" max=\"${4:5}\" id=\"${1:customRange2}\">"
+        ],
+        "description": "b5-range-minmax"
+    },
+
+    "Bootstrap 5 Range Steps": {
+        "prefix": "b5-range-steps",
+        "body": [
+            "<label for=\"${1:customRange3}\" class=\"form-label\">${2:Example range}</label>",
+            "<input type=\"range\" class=\"form-range\" min=\"${3:0}\" max=\"${4:5}\" step=\"${5:0.5}\" id=\"${1:customRange3}\">"
+        ],
+        "description": "b5-range-steps"
+    },
+
+    "Bootstrap 5 Addon Size Default": {
+        "prefix": "b5-addon-default",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<span class=\"input-group-text\" id=\"${1:inputGroup-sizing-default}\">Default</span>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"Sizing example input\" aria-describedby=\"${1:inputGroup-sizing-default}\">",
+            "</div>"
+        ],
+        "description": "b5-addon-default"
+    },
+
+    "Bootstrap 5 Addon Size": {
+        "prefix": "b5-addon-size",
+        "body": [
+            "<div class=\"input-group input-group-${1|sm,lg|} mb-3\">",
+                "\t<span class=\"input-group-text\" id=\"inputGroup-sizing-${1|sm,lg|}\">${2:Small or Large}</span>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"Sizing example input\" aria-describedby=\"inputGroup-sizing-${1|sm,lg|}\">",
+            "</div>"
+        ],
+        "description": "b5-addon-size"
+    },
+
+    "Bootstrap 5 Addon Checkbox": {
+        "prefix": "b5-addon-checkbox",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<div class=\"input-group-text\">",
+                    "\t\t<input class=\"form-check-input mt-0\" type=\"checkbox\" value=\"\" aria-label=\"Checkbox for following text input\">",
+                "\t</div>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"Text input with checkbox\">",
+            "</div>"
+        ],
+        "description": "b5-addon-checkbox"
+    },
+
+    "Bootstrap 5 Addon Radio": {
+        "prefix": "b5-addon-radio",
+        "body": [
+            "<div class=\"input-group\">",
+                "\t<div class=\"input-group-text\">",
+                    "\t\t<input class=\"form-check-input mt-0\" type=\"radio\" value=\"\" aria-label=\"Radio button for following text input\">",
+                "\t</div>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"Text input with radio button\">",
+            "</div>"
+        ],
+        "description": "b5-addon-radio"
+    },
+
+    "Bootstrap 5 Addon Multiple Input": {
+        "prefix": "b5-addon-multi-input",
+        "body": [
+            "<div class=\"input-group\">",
+                "\t<span class=\"input-group-text\">${1:First and last name}</span>",
+                "\t<input type=\"text\" aria-label=\"${2:First name}\" class=\"form-control\">",
+                "\t<input type=\"text\" aria-label=\"${3:Last name}\" class=\"form-control\">",
+            "</div>"
+        ],
+        "description": "b5-addon-multi-input"
+    },
+
+    "Bootstrap 5 Addon Multiple Start": {
+        "prefix": "b5-addon-multi-start",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<span class=\"input-group-text\">${1:$}</span>",
+                "\t<span class=\"input-group-text\">${2:0.00}</span>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${3:Dollar amount (with dot and two decimal places)}\">",
+            "</div>"
+        ],
+        "description": "b5-addon-multi-start"
+    },
+
+    "Bootstrap 5 Addon Multiple End": {
+        "prefix": "b5-addon-multi-end",
+        "body": [
+            "<div class=\"input-group\">",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${1:Dollar amount (with dot and two decimal places)}\">",
+                "\t<span class=\"input-group-text\">${2:$}</span>",
+                "\t<span class=\"input-group-text\">${3:0.00}</span>",
+            "</div>"
+        ],
+        "description": "b5-addon-multi-end"
+    },
+
+    "Bootstrap 5 Addon Button Start": {
+        "prefix": "b5-addon-btn-start",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:button-addon1}\">${2:Button}</button>",
+                "\t<input type=\"text\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with button addon\" aria-describedby=\"${1:button-addon1}\">",
+            "</div>"
+        ],
+        "description": "b5-addon-btn-start"
+    },
+
+    "Bootstrap 5 Addon Button End": {
+        "prefix": "b5-addon-btn-end",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"Recipient's username\" aria-describedby=\"${1:button-addon2}\">",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:button-addon2}\">${2:Button}</button>",
+            "</div>"
+        ],
+        "description": "b5-addon-btn-end"
+    },
+
+    "Bootstrap 5 Addon Dropdown Start": {
+        "prefix": "b5-addon-dropdwn-start",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">${1:Dropdown}</button>",
+                "\t<ul class=\"dropdown-menu\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${2:Action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${3:Another action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${4:Something else here}</a></li>",
+                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${5:Separated link}</a></li>",
+                "\t</ul>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${6:Text input with dropdown button}\">",
+            "</div>"
+        ],
+        "description": "b5-addon-dropdwn-start"
+    },
+
+    "Bootstrap 5 Addon Dropdown End": {
+        "prefix": "b5-addon-dropdwn-end",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${1:Text input with dropdown button}\">",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">${2:Dropdown}</button>",
+                "\t<ul class=\"dropdown-menu dropdown-menu-end\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${3:Action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${4:Another action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${5:Something else here}</a></li>",
+                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${6:Separated link}</a></li>",
+                "\t</ul>",
+            "</div>"
+        ],
+        "description": "b5-addon-dropdwn-end"
+    },
+
+    "Bootstrap 5 Addon Dropdown Sides": {
+        "prefix": "b5-addon-dropdwn-sides",
+        "body": [
+            "<div class=\"input-group\">",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">${1:Dropdown}</button>",
+                "\t<ul class=\"dropdown-menu\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${2:Action before}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${3:Another action before}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${4:Something else here}</a></li>",
+                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${5:Separated link}</a></li>",
+                "\t</ul>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${6:Text input with 2 dropdown buttons}\">",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">${7:Dropdown}</button>",
+                "\t<ul class=\"dropdown-menu dropdown-menu-end\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${8:Action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${9:Another action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${10:Something else here}</a></li>",
+                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${11:Separated link}</a></li>",
+                "\t</ul>",
+            "</div>"
+        ],
+        "description": "b5-addon-dropdwn-sides"
+    },
+
+    "Bootstrap 5 Segmented Buttons Start": {
+        "prefix": "b5-segment-btn-start",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<button type=\"button\" class=\"btn btn-outline-secondary\">${1:Action}</button>",
+                "\t<button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">",
+                    "\t\t<span class=\"visually-hidden\">${2:Toggle Dropdown}</span>",
+                "\t</button>",
+                "\t<ul class=\"dropdown-menu\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${3:Action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${4:Another action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${5:Something else here}</a></li>",
+                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${6:Separated link}</a></li>",
+                "\t</ul>",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${7:Text input with segmented dropdown button}\">",
+            "</div>"
+        ],
+        "description": "b5-segment-btn-start"
+    },
+
+    "Bootstrap 5 Segmented Buttons End": {
+        "prefix": "b5-segment-btn-end",
+        "body": [
+            "<div class=\"input-group\">",
+                "\t<input type=\"text\" class=\"form-control\" aria-label=\"${1:Text input with segmented dropdown button}\">",
+                "\t<button type=\"button\" class=\"btn btn-outline-secondary\">${2:Action}</button>",
+                "\t<button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">",
+                    "\t\t<span class=\"visually-hidden\">${3:Toggle Dropdown}</span>",
+                "\t</button>",
+                "\t<ul class=\"dropdown-menu dropdown-menu-end\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${4:Action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${5:Another action}</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${6:Something else here}</a></li>",
+                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">${7:Separated link}</a></li>",
+                "\t</ul>",
+            "</div>"
+        ],
+        "description": "b5-segment-btn-end"
+    },
+
+    "Bootstrap 5 Custom Select Label": {
+        "prefix": "b5-custom-select-label",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<label class=\"input-group-text\" for=\"${1:inputGroupSelect01}\">${2:Options}</label>",
+                "\t<select class=\"form-select\" id=\"${1:inputGroupSelect01}\">",
+                    "\t\t<option selected>${3:Choose...}</option>",
+                    "\t\t<option value=\"1\">${4:One}</option>",
+                    "\t\t<option value=\"2\">${5:Two}</option>",
+                    "\t\t<option value=\"3\">${6:Three}</option>",
+                "\t</select>",
+            "</div>"
+        ],
+        "description": "b5-custom-select-label"
+    },
+
+    "Bootstrap 5 Custom Select Button": {
+        "prefix": "b5-custom-select-btn",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\">${1:Button}</button>",
+                "\t<select class=\"form-select\" id=\"${2:inputGroupSelect03}\" aria-label=\"${3:Example select with button addon}\">",
+                    "\t\t<option selected>${4:Choose...}</option>",
+                    "\t\t<option value=\"1\">${5:One}</option>",
+                    "\t\t<option value=\"2\">${6:Two}</option>",
+                    "\t\t<option value=\"3\">${7:Three}</option>",
+                "\t</select>",
+            "</div>"
+        ],
+        "description": "b5-custom-select-btn"
+    },
+
+    "Bootstrap 5 Custom File Input Label": {
+        "prefix": "b5-custom-file-label",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<label class=\"input-group-text\" for=\"${1:inputGroupFile01}\">${2:Upload}</label>",
+                "\t<input type=\"file\" class=\"form-control\" id=\"${1:inputGroupFile01}\">",
+            "</div>"
+        ],
+        "description": "b5-custom-file-label"
+    },
+
+    "Bootstrap 5 Custom File Input Button": {
+        "prefix": "b5-custom-file-btn",
+        "body": [
+            "<div class=\"input-group mb-3\">",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:inputGroupFileAddon03}\">${2:Button}</button>",
+                "\t<input type=\"file\" class=\"form-control\" id=\"${3:inputGroupFile03}\" aria-describedby=\"${1:inputGroupFileAddon03}\" aria-label=\"Upload\">",
+            "</div>"
+        ],
+        "description": "b5-custom-file-btn"
+    },
+
+    "Bootstrap 5 Floating Label Form": {
+        "prefix": "b5-form-float-label",
+        "body": [
+            "<div class=\"form-floating\">",
+                "\t<input type=\"${1:email}\" class=\"form-control\" id=\"${2:floatingInputValue}\" placeholder=\"${3:name@example.com}\" value=\"${4:test@example.com}\">",
+                "\t<label for=\"${2:floatingInputValue}\">${5:Input with value}</label>",
+            "</div>"
+        ],
+        "description": "b5-form-float-label"
+    },
+
+    "Bootstrap 5 Floating Label Invalid Form": {
+        "prefix": "b5-form-float-label-invalid",
+        "body": [
+            "<div class=\"form-floating\">",
+                "\t<input type=\"email\" class=\"form-control is-invalid\" id=\"${1:floatingInputInvalid}\" placeholder=\"${2:name@example.com}\" value=\"${3:test@example.com}\">",
+                "\t<label for=\"${1:floatingInputInvalid}\">${4:Invalid input}</label>",
+            "</div>"
+        ],
+        "description": "b5-form-float-invalid-label-invalid"
+    },
+
+    "Bootstrap 5 Floating Textarea Form": {
+        "prefix": "b5-form-float-textarea",
+        "body": [
+            "<div class=\"form-floating\">",
+                "\t<textarea class=\"form-control\" placeholder=\"${1:Leave a comment here}\" id=\"${2:floatingTextarea}\"></textarea>",
+                "\t<label for=\"${2:floatingTextarea}\">${3:Comments}</label>",
+            "</div>"
+        ],
+        "description": "b5-form-float-textarea"
+    },
+
+    "Bootstrap 5 Floating Select": {
+        "prefix": "b5-form-float-select",
+        "body": [
+            "<div class=\"form-floating\">",
+                "\t<select class=\"form-select\" id=\"${1:floatingSelect}\" aria-label=\"${2:Floating label select example}\">",
+                    "\t\t<option selected>${3:Open this select menu}</option>",
+                    "\t\t<option value=\"1\">${4:One}</option>",
+                    "\t\t<option value=\"2\">${5:Two}</option>",
+                    "\t\t<option value=\"3\">${6:Three}</option>",
+                "\t</select>",
+                "\t<label for=\"${1:floatingSelect}\">${7:Works with selects}</label>",
+            "</div>"
+        ],
+        "description": "b5-form-float-select"
+    },
+
+    "Bootstrap 5 Accordion Close": {
+        "prefix": "b5-accordion-close",
+        "body": [
+            "<div class=\"accordion accordion-flush\" id=\"accordionFlushExample\">",
+                "\t<div class=\"accordion-item\">",
+                    "\t\t<h2 class=\"accordion-header\" id=\"flush-headingOne\">",
+                        "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#flush-collapseOne\" aria-expanded=\"false\" aria-controls=\"flush-collapseOne\">",
+                            "\t\t\t\t${1:Accordion Item #1}",
+                        "\t\t\t</button>",
+                    "\t\t</h2>",
+                    "\t\t<div id=\"flush-collapseOne\" class=\"accordion-collapse collapse\" aria-labelledby=\"flush-headingOne\" data-bs-parent=\"#accordionFlushExample\">",
+                        "\t\t\t<div class=\"accordion-body\">${2:Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.}</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"accordion-item\">",
+                    "\t\t<h2 class=\"accordion-header\" id=\"flush-headingTwo\">",
+                        "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#flush-collapseTwo\" aria-expanded=\"false\" aria-controls=\"flush-collapseTwo\">",
+                            "\t\t\t\t${3:Accordion Item #2}",
+                        "\t\t\t</button>",
+                    "\t\t</h2>",
+                    "\t\t<div id=\"flush-collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"flush-headingTwo\" data-bs-parent=\"#accordionFlushExample\">",
+                        "\t\t\t<div class=\"accordion-body\">${4:Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.}</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"accordion-item\">",
+                    "\t\t<h2 class=\"accordion-header\" id=\"flush-headingThree\">",
+                        "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#flush-collapseThree\" aria-expanded=\"false\" aria-controls=\"flush-collapseThree\">",
+                            "\t\t\t\t${5:Accordion Item #3}",
+                        "\t\t\t</button>",
+                    "\t\t</h2>",
+                    "\t\t<div id=\"flush-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"flush-headingThree\" data-bs-parent=\"#accordionFlushExample\">",
+                        "\t\t\t<div class=\"accordion-body\">${6:Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.}</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-accordion-close"
+    },
+
+    "Bootstrap 5 Accordion Open": {
+        "prefix": "b5-accordion-open",
+        "body": [
+            "<div class=\"accordion\" id=\"accordionPanelsStayOpenExample\">",
+                "\t<div class=\"accordion-item\">",
+                    "\t\t<h2 class=\"accordion-header\" id=\"panelsStayOpen-headingOne\">",
+                        "\t\t\t<button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#panelsStayOpen-collapseOne\" aria-expanded=\"true\" aria-controls=\"panelsStayOpen-collapseOne\">",
+                            "\t\t\t\t${1:Accordion Item #1}",
+                        "\t\t\t</button>",
+                    "\t\t</h2>",
+                    "\t\t<div id=\"panelsStayOpen-collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"panelsStayOpen-headingOne\">",
+                        "\t\t\t<div class=\"accordion-body\">",
+                            "\t\t\t\t${2:<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.}",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"accordion-item\">",
+                    "\t\t<h2 class=\"accordion-header\" id=\"panelsStayOpen-headingTwo\">",
+                        "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#panelsStayOpen-collapseTwo\" aria-expanded=\"false\" aria-controls=\"panelsStayOpen-collapseTwo\">",
+                            "\t\t\t\t${3:Accordion Item #2}",
+                        "\t\t\t</button>",
+                    "\t\t</h2>",
+                    "\t\t<div id=\"panelsStayOpen-collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"panelsStayOpen-headingTwo\">",
+                        "\t\t\t<div class=\"accordion-body\">",
+                            "\t\t\t\t${4:<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.}",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"accordion-item\">",
+                    "\t\t<h2 class=\"accordion-header\" id=\"panelsStayOpen-headingThree\">",
+                        "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#panelsStayOpen-collapseThree\" aria-expanded=\"false\" aria-controls=\"panelsStayOpen-collapseThree\">",
+                            "\t\t\t\t${5:Accordion Item #3}",
+                        "\t\t\t</button>",
+                    "\t\t</h2>",
+                    "\t\t<div id=\"panelsStayOpen-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"panelsStayOpen-headingThree\">",
+                        "\t\t\t<div class=\"accordion-body\">",
+                            "\t\t\t\t${6:<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.}",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-accordion-open"
+    },
+
+    "Bootstrap 5 Alert": {
+        "prefix": "b5-alert",
+        "body": [
+            "<div class=\"alert alert-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"alert\">",
+                "\t${2:A simple alert—check it out!}",
+            "</div>"
+        ],
+        "description": "b5-alert"
+    },
+
+    "Bootstrap 5 Alert Link": {
+        "prefix": "b5-alert-link",
+        "body": [
+            "<div class=\"alert alert-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"alert\">",
+                "\t${2:A simple primary alert with }<a href=\"#\" class=\"alert-link\">${3:an example link}</a>${4:. Give it a click if you like.}",
+            "</div>"
+        ],
+        "description": "b5-alert-link"
+    },
+
+    "Bootstrap 5 Alert Content": {
+        "prefix": "b5-alert-content",
+        "body": [
+            "<div class=\"alert alert-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"alert\">",
+                "\t<h4 class=\"alert-heading\">${2:Well done!}</h4>",
+                "\t<p>${3:Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.}</p>",
+                "\t<hr>",
+                "\t<p class=\"mb-0\">${4:Whenever you need to, be sure to use margin utilities to keep things nice and tidy.}</p>",
+            "</div>"
+        ],
+        "description": "b5-alert-content"
+    },
+
+    "Bootstrap 5 Alert Dismissing": {
+        "prefix": "b5-alert-dismiss",
+        "body": [
+            "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">",
+                "\t<strong>${1:Holy guacamole!}</strong>${2: You should check in on some of those fields below.}",
+                "\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>",
+            "</div>"
+        ],
+        "description": "b5-alert-dismiss"
+    },
+
+    "Bootstrap 5 Badge": {
+        "prefix": "b5-badge",
+        "body": [
+            "<${1|h1,h2,h3,h4,h5,h6|}>Example heading <span class=\"badge bg-secondary\">New</span></${1|h1,h2,h3,h4,h5,h6|}>"
+        ],
+        "description": "b5-badge"
+    },
+
+    "Bootstrap 5 Badge Button": {
+        "prefix": "b5-badge-button",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-primary\">",
+                "\tNotifications <span class=\"badge bg-secondary\">4</span>",
+            "</button>"
+        ],
+        "description": "b5-badge-button"
+    },
+
+    "Bootstrap 5 Badge Positioned Count": {
+        "prefix": "b5-badge-positioned-count",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-primary position-relative\">",
+                "\tInbox",
+                "\t<span class=\"position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger\">",
+                    "\t\t99+",
+                    "\t\t<span class=\"visually-hidden\">unread messages</span>",
+                "\t</span>",
+            "</button>"
+        ],
+        "description": "b5-badge-positioned-count"
+    },
+
+    "Bootstrap 5 Badge Positioned No Count": {
+        "prefix": "b5-badge-positioned",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-primary position-relative\">",
+                "\tProfile",
+                "\t<span class=\"position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle\">",
+                    "\t\t<span class=\"visually-hidden\">New alerts</span>",
+                "\t</span>",
+            "</button>"
+        ],
+        "description": "b5-badge-positioned"
+    },
+
+    "Bootstrap 5 Breadcrumb": {
+        "prefix": "b5-breadcrumb",
+        "body": [
+            "<nav aria-label=\"breadcrumb\">",
+                "\t<ol class=\"breadcrumb\">",
+                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
+                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Library</a></li>",
+                    "\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Data</li>",
+                "\t</ol>",
+            "</nav>"
+        ],
+        "description": "b5-breadcrumb"
+    },
+
+    "Bootstrap 5 Breadcrumb Divider": {
+        "prefix": "b5-breadcrumb-divider",
+        "body": [
+            "<nav style=\"--bs-breadcrumb-divider: '${1:>}';\" aria-label=\"breadcrumb\">",
+                "\t<ol class=\"breadcrumb\">",
+                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
+                    "\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Library</li>",
+                "\t</ol>",
+            "</nav>"
+        ],
+        "description": "b5-breadcrumb-divider"
+    },
+
+    "Bootstrap 5 Buttons": {
+        "prefix": "b5-button",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|}\">${2:Button}</button>"
+        ],
+        "description": "b5-button"
+    },
+
+    "Bootstrap 5 Outline Buttons": {
+        "prefix": "b5-outline-button",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-outline-${1|primary,secondary,success,danger,warning,info,light,dark|}\">Outline Button</button>"
+        ],
+        "description": "b5-outline-button"
+    },
+
+    "Bootstrap 5 Button Size": {
+        "prefix": "b5-button-size",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|} btn-${1|lg,sm|}\">Size button</button>"
+        ],
+        "description": "b5-button-size"
+    },
+
+    "Bootstrap 5 Block Buttons": {
+        "prefix": "b5-button-block",
+        "body": [
+            "<div class=\"d-grid gap-2\">",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
+            "</div>"
+        ],
+        "description": "b5-button-block"
+    },
+
+    "Bootstrap 5 Responsive Block Buttons": {
+        "prefix": "b5-button-block-responsive",
+        "body": [
+            "<div class=\"d-grid gap-2 d-md-block\">",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
+            "</div>"
+        ],
+        "description": "b5-button-block-responsive"
+    },
+
+    "Bootstrap 5 Button Group": {
+        "prefix": "b5-button-group",
+        "body": [
+            "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">",
+                "\t<button type=\"button\" class=\"btn btn-primary\">Left</button>",
+                "\t<button type=\"button\" class=\"btn btn-primary\">Middle</button>",
+                "\t<button type=\"button\" class=\"btn btn-primary\">Right</button>",
+            "</div>"
+        ],
+        "description": "b5-button-group"
+    },
+
+    "Bootstrap 5 Checkbox Button Group": {
+        "prefix": "b5-checkbox-button-group",
+        "body": [
+            "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic checkbox toggle button group\">",
+                "\t<input type=\"checkbox\" class=\"btn-check\" id=\"btncheck1\" autocomplete=\"off\">",
+                "\t<label class=\"btn btn-outline-primary\" for=\"btncheck1\">Checkbox 1</label>",
+
+                "\n\t<input type=\"checkbox\" class=\"btn-check\" id=\"btncheck2\" autocomplete=\"off\">",
+                "\t<label class=\"btn btn-outline-primary\" for=\"btncheck2\">Checkbox 2</label>",
+
+                "\n\t<input type=\"checkbox\" class=\"btn-check\" id=\"btncheck3\" autocomplete=\"off\">",
+                "\t<label class=\"btn btn-outline-primary\" for=\"btncheck3\">Checkbox 3</label>",
+            "</div>"
+        ],
+        "description": "b5-checkbox-button-group"
+    },
+
+    "Bootstrap 5 Radio Button Group": {
+        "prefix": "b5-radio-button-group",
+        "body": [
+            "<div class=\"btn-group\" role=\"group\" aria-label=\"Basic radio toggle button group\">",
+                "\t<input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio1\" autocomplete=\"off\" checked>",
+                "\t<label class=\"btn btn-outline-primary\" for=\"btnradio1\">Radio 1</label>",
+
+                "\n\t<input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio2\" autocomplete=\"off\">",
+                "\t<label class=\"btn btn-outline-primary\" for=\"btnradio2\">Radio 2</label>",
+
+                "\n\t<input type=\"radio\" class=\"btn-check\" name=\"btnradio\" id=\"btnradio3\" autocomplete=\"off\">",
+                "\t<label class=\"btn btn-outline-primary\" for=\"btnradio3\">Radio 3</label>",
+            "</div>"
+        ],
+        "description": "b5-radio-button-group"
+    },
+
+    "Bootstrap 5 Card": {
+        "prefix": "b5-card",
+        "body": [
+            "<div class=\"card\" style=\"width: 18rem;\">",
+                "\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                "\t<div class=\"card-body\">",
+                    "\t\t<h5 class=\"card-title\">${1:Card title}</h5>",
+                    "\t\t<p class=\"card-text\">${2:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>",
+                    "\t\t<a href=\"#\" class=\"btn btn-primary\">${3:Go somewhere}</a>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card"
+    },
+
+    "Bootstrap 5 Card Image": {
+        "prefix": "b5-card-image",
+        "body": [
+            "<div class=\"card\" style=\"width: 18rem;\">",
+                "\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                "\t<div class=\"card-body\">",
+                    "\t\t<p class=\"card-text\">${1:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-image"
+    },
+
+    "Bootstrap 5 Card List": {
+        "prefix": "b5-card-list",
+        "body": [
+            "<div class=\"card\" style=\"width: 18rem;\">",
+                "\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                "\t<div class=\"card-body\">",
+                    "\t\t<h5 class=\"card-title\">Card title</h5>",
+                    "\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>",
+                "\t</div>",
+                "\t<ul class=\"list-group list-group-flush\">",
+                    "\t\t<li class=\"list-group-item\">An item</li>",
+                    "\t\t<li class=\"list-group-item\">A second item</li>",
+                    "\t\t<li class=\"list-group-item\">A third item</li>",
+                "\t</ul>",
+                "\t<div class=\"card-body\">",
+                    "\t\t<a href=\"#\" class=\"card-link\">Card link</a>",
+                    "\t\t<a href=\"#\" class=\"card-link\">Another link</a>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-list"
+    },
+
+    "Bootstrap 5 Card Navigation Tabs": {
+        "prefix": "b5-card-nav-tab",
+        "body": [
+            "<div class=\"card text-center\">",
+                "\t<div class=\"card-header\">",
+                    "\t\t<ul class=\"nav nav-tabs card-header-tabs\">",
+                    "\t\t<li class=\"nav-item\">",
+                        "\t\t\t<a class=\"nav-link active\" aria-current=\"true\" href=\"#\">Active</a>",
+                    "\t\t</li>",
+                    "\t\t<li class=\"nav-item\">",
+                        "\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                    "\t\t</li>",
+                    "\t\t<li class=\"nav-item\">",
+                        "\t\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+                    "\t\t</li>",
+                    "\t\t</ul>",
+                "\t</div>",
+                "\t<div class=\"card-body\">",
+                    "\t\t<h5 class=\"card-title\">Special title treatment</h5>",
+                    "\t\t<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>",
+                    "\t\t<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-nav-tab"
+    },
+
+    "Bootstrap 5 Card Navigation Pills": {
+        "prefix": "b5-card-nav-pills",
+        "body": [
+            "<div class=\"card text-center\">",
+                "\t<div class=\"card-header\">",
+                    "\t\t<ul class=\"nav nav-pills card-header-pills\">",
+                    "\t\t<li class=\"nav-item\">",
+                        "\t\t\t<a class=\"nav-link active\" href=\"#\">Active</a>",
+                    "\t\t</li>",
+                    "\t\t<li class=\"nav-item\">",
+                        "\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                    "\t\t</li>",
+                    "\t\t<li class=\"nav-item\">",
+                        "\t\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+                    "\t\t</li>",
+                    "\t\t</ul>",
+                "\t</div>",
+                "\t<div class=\"card-body\">",
+                    "\t\t<h5 class=\"card-title\">Special title treatment</h5>",
+                    "\t\t<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>",
+                    "\t\t<a href=\"#\" class=\"btn btn-primary\">Go somewhere</a>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-nav-pills"
+    },
+
+    "Bootstrap 5 Card Image Overlay": {
+        "prefix": "b5-card-image-overlay",
+        "body": [
+            "<div class=\"card bg-dark text-white\">",
+                "\t<img src=\"https://dummyimage.com/720x240/343434/454545.png&text=Image+cap\" class=\"card-img\" alt=\"...\">",
+                "\t<div class=\"card-img-overlay\">",
+                    "\t\t<h5 class=\"card-title\">${1:Card title}</h5>",
+                    "\t\t<p class=\"card-text\">${2:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>",
+                    "\t\t<p class=\"card-text\">${3:Last updated 3 mins ago}</p>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-image-overlay"
+    },
+
+    "Bootstrap 5 Card Horizontal": {
+        "prefix": "b5-card-horizontal",
+        "body": [
+            "<div class=\"card mb-3\" style=\"max-width: 540px;\">",
+                "\t<div class=\"row g-0\">",
+                    "\t\t<div class=\"col-md-4\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/540x1024/919191/7a7a7a&text=image\" class=\"img-fluid rounded-start\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"col-md-8\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">${1:Card title}</h5>",
+                            "\t\t\t\t<p class=\"card-text\">${2:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>",
+                            "\t\t\t\t<p class=\"card-text\"><small class=\"text-muted\">${3:Last updated 3 mins ago}</small></p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-horizontal"
+    },
+
+    "Bootstrap 5 Card Color": {
+        "prefix": "b5-card-color",
+        "body": [
+            "<div class=\"card text-${2|white,dark|} bg-${1|primary,secondary,success,danger,warning,info,light,dark|} mb-3\" style=\"max-width: 18rem;\">",
+                "\t<div class=\"card-header\">${3:Header}</div>",
+                "\t<div class=\"card-body\">",
+                    "\t\t<h5 class=\"card-title\">${4:Primary card title}</h5>",
+                    "\t\t<p class=\"card-text\">${5:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-color"
+    },
+
+    "Bootstrap 5 Card Border": {
+        "prefix": "b5-card-border",
+        "body": [
+            "<div class=\"card border-${1|primary,secondary,success,danger,warning,info,light,dark|} mb-3\" style=\"max-width: 18rem;\">",
+                "\t<div class=\"card-header\">${3:Header}</div>",
+                "\t<div class=\"card-body text-${2|primary,secondary,success,danger,warning,info,light,dark|}\">",
+                    "\t\t<h5 class=\"card-title\">${4:Card title}</h5>",
+                    "\t\t<p class=\"card-text\">${5:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-border"
+    },
+
+    "Bootstrap 5 Card Group": {
+        "prefix": "b5-card-group",
+        "body": [
+            "<div class=\"card-group\">",
+                "\t<div class=\"card\">",
+                    "\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                    "\t\t<div class=\"card-body\">",
+                        "\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                        "\t\t\t<p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>",
+                        "\t\t\t<p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"card\">",
+                    "\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                    "\t\t<div class=\"card-body\">",
+                        "\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                        "\t\t\t<p class=\"card-text\">This card has supporting text below as a natural lead-in to additional content.</p>",
+                        "\t\t\t<p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"card\">",
+                    "\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                    "\t\t<div class=\"card-body\">",
+                        "\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                        "\t\t\t<p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>",
+                        "\t\t\t<p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-group"
+    },
+
+    "Bootstrap 5 Card Group Footer": {
+        "prefix": "b5-card-group-footer",
+        "body": [
+            "<div class=\"card-group\">",
+                "\t<div class=\"card\">",
+                    "\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                    "\t\t<div class=\"card-body\">",
+                        "\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                        "\t\t\t<p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"card-footer\">",
+                        "\t\t\t<small class=\"text-muted\">Last updated 3 mins ago</small>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"card\">",
+                    "\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                    "\t\t<div class=\"card-body\">",
+                        "\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                        "\t\t\t<p class=\"card-text\">This card has supporting text below as a natural lead-in to additional content.</p>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"card-footer\">",
+                        "\t\t\t<small class=\"text-muted\">Last updated 3 mins ago</small>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"card\">",
+                    "\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                    "\t\t<div class=\"card-body\">",
+                        "\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                        "\t\t\t<p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"card-footer\">",
+                        "\t\t\t<small class=\"text-muted\">Last updated 3 mins ago</small>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-group-footer"
+    },
+
+    "Bootstrap 5 Card Grid": {
+        "prefix": "b5-card-grid",
+        "body": [
+            "<div class=\"row row-cols-1 row-cols-md-2 g-4\">",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This is a longer card with supporting text below as a natural lead-in to additional content.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-grid"
+    },
+
+    "Bootstrap 5 Card Grid Footer": {
+        "prefix": "b5-card-grid-footer",
+        "body": [
+            "<div class=\"row row-cols-1 row-cols-md-3 g-4\">",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card h-100\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"card-footer\">",
+                            "\t\t\t\t<small class=\"text-muted\">Last updated 3 mins ago</small>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card h-100\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This card has supporting text below as a natural lead-in to additional content.</p>",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"card-footer\">",
+                            "\t\t\t\t<small class=\"text-muted\">Last updated 3 mins ago</small>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"card h-100\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap\" class=\"card-img-top\" alt=\"...\">",
+                        "\t\t\t<div class=\"card-body\">",
+                            "\t\t\t\t<h5 class=\"card-title\">Card title</h5>",
+                            "\t\t\t\t<p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"card-footer\">",
+                            "\t\t\t\t<small class=\"text-muted\">Last updated 3 mins ago</small>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-card-grid-footer"
+    },
+
+    "Bootstrap 5 Carousel Slide Only": {
+        "prefix": "b5-carousel-slide-only",
+        "body": [
+            "<div id=\"carouselExampleSlidesOnly\" class=\"carousel slide\" data-bs-ride=\"carousel\">",
+                "\t<div class=\"carousel-inner\">",
+                    "\t\t<div class=\"carousel-item active\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-carousel-slide-only"
+    },
+
+    "Bootstrap 5 Carousel Controls": {
+        "prefix": "b5-carousel-controls",
+        "body": [
+            "<div id=\"carouselExampleControls\" class=\"carousel slide\" data-bs-ride=\"carousel\">",
+                "\t<div class=\"carousel-inner\">",
+                    "\t\t<div class=\"carousel-item active\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleControls\" data-bs-slide=\"prev\">",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Previous</span>",
+                "\t</button>",
+                "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleControls\" data-bs-slide=\"next\">",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Next</span>",
+                "\t</button>",
+            "</div>"
+        ],
+        "description": "b5-carousel-controls"
+    },
+
+    "Bootstrap 5 Carousel Indicators": {
+        "prefix": "b5-carousel-indicators",
+        "body": [
+            "<div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-bs-ride=\"carousel\">",
+                "\t<div class=\"carousel-indicators\">",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\"></button>",
+                "\t</div>",
+                "\t<div class=\"carousel-inner\">",
+                    "\t\t<div class=\"carousel-item active\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide=\"prev\">",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Previous</span>",
+                "\t</button>",
+                "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide=\"next\">",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Next</span>",
+                "\t</button>",
+            "</div>"
+        ],
+        "description": "b5-carousel-indicators"
+    },
+
+    "Bootstrap 5 Carousel Captions": {
+        "prefix": "b5-carousel-captions",
+        "body": [
+            "<div id=\"carouselExampleCaptions\" class=\"carousel slide\" data-bs-ride=\"carousel\">",
+                "\t<div class=\"carousel-indicators\">",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\"></button>",
+                "\t</div>",
+                "\t<div class=\"carousel-inner\">",
+                    "\t\t<div class=\"carousel-item active\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                        "\t\t\t<div class=\"carousel-caption d-none d-md-block\">",
+                            "\t\t\t\t<h5>First slide label</h5>",
+                            "\t\t\t\t<p>Some representative placeholder content for the first slide.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                        "\t\t\t<div class=\"carousel-caption d-none d-md-block\">",
+                            "\t\t\t\t<h5>Second slide label</h5>",
+                            "\t\t\t\t<p>Some representative placeholder content for the second slide.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                        "\t\t\t<div class=\"carousel-caption d-none d-md-block\">",
+                            "\t\t\t\t<h5>Third slide label</h5>",
+                            "\t\t\t\t<p>Some representative placeholder content for the third slide.</p>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide=\"prev\">",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Previous</span>",
+                "\t</button>",
+                "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide=\"next\">",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Next</span>",
+                "\t</button>",
+            "</div>"
+        ],
+        "description": "b5-carousel-captions"
+    },
+
+    "Bootstrap 5 Carousel Crossfade": {
+        "prefix": "b5-carousel-crossfade",
+        "body": [
+            "<div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade\" data-bs-ride=\"carousel\">",
+                "\t<div class=\"carousel-inner\">",
+                    "\t\t<div class=\"carousel-item active\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                    "\t\t<div class=\"carousel-item\">",
+                        "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...\">",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"prev\">",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Previous</span>",
+                "\t</button>",
+                "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"next\">",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
+                    "\t\t<span class=\"visually-hidden\">Next</span>",
+                "\t</button>",
+            "</div>"
+        ],
+        "description": "b5-carousel-crossfade"
+    },
+
+    "Bootstrap 5 Close Button": {
+        "prefix": "b5-close-button",
+        "body": [
+            "<button type=\"button\" class=\"btn-close ${2| ,btn-close-white|}\"${1| , disabled|} aria-label=\"Close\"></button>"
+        ],
+        "description": "b5-close-button"
+    },
+
+    "Bootstrap 5 Collapse": {
+        "prefix": "b5-collapse",
+        "body": [
+            "<p>",
+                "\t<a class=\"btn btn-primary\" data-bs-toggle=\"collapse\" href=\"#collapseExample\" role=\"button\" aria-expanded=\"false\" aria-controls=\"collapseExample\">",
+                    "\t\tLink with href",
+                "\t</a>",
+                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample\">",
+                    "\t\tButton with data-bs-target",
+                "\t</button>",
+            "</p>",
+            "<div class=\"collapse\" id=\"collapseExample\">",
+                "\t<div class=\"card card-body\">",
+                    "\t\tSome placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-collapse"
+    },
+
+    "Bootstrap 5 Collapse Multiple": {
+        "prefix": "b5-collapse-multiple",
+        "body": [
+            "<p>",
+                "\t<a class=\"btn btn-primary\" data-bs-toggle=\"collapse\" href=\"#multiCollapseExample1\" role=\"button\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample1\">Toggle first element</a>",
+                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#multiCollapseExample2\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample2\">Toggle second element</button>",
+                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\".multi-collapse\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample1 multiCollapseExample2\">Toggle both elements</button>",
+            "</p>",
+            "<div class=\"row\">",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"collapse multi-collapse\" id=\"multiCollapseExample1\">",
+                        "\t\t\t<div class=\"card card-body\">",
+                            "\t\t\t\tSome placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+                "\t<div class=\"col\">",
+                    "\t\t<div class=\"collapse multi-collapse\" id=\"multiCollapseExample2\">",
+                        "\t\t\t<div class=\"card card-body\">",
+                            "\t\t\t\tSome placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-collapse-multiple"
+    },
+
+    "Bootstrap 5 Dropdown Button": {
+        "prefix": "b5-dropdown-button",
+        "body": [
+            "<div class=\"dropdown\">",
+                "\t<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|} dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">",
+                    "\t\tDropdown button",
+                "\t</button>",
+                "\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
+                "\t</ul>",
+            "</div>"
+        ],
+        "description": "b5-dropdown-button"
+    },
+
+    "Bootstrap 5 Dropdown Anchor": {
+        "prefix": "b5-dropdown-anchor",
+        "body": [
+            "<div class=\"dropdown\">",
+                "\t<a class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|} dropdown-toggle\" href=\"#\" role=\"button\" id=\"dropdownMenuLink\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">",
+                    "\t\tDropdown link",
+                "\t</a>",
+                "\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
+                "\t</ul>",
+            "</div>"
+        ],
+        "description": "b5-dropdown-anchor"
+    },
+
+    "Bootstrap 5 List Group": {
+        "prefix": "b5-list-group",
+        "body": [
+            "<ul class=\"list-group\">",
+                "\t<li class=\"list-group-item active\" aria-current=\"true\">An active item</li>",
+                "\t<li class=\"list-group-item\">A second item</li>",
+                "\t<li class=\"list-group-item\">A third item</li>",
+                "\t<li class=\"list-group-item\">A fourth item</li>",
+                "\t<li class=\"list-group-item disabled\" aria-disabled=\"true\">And a fifth one</li>",
+            "</ul>"
+        ],
+        "description": "b5-list-group"
+    },
+
+    "Bootstrap 5 List Link": {
+        "prefix": "b5-list-link",
+        "body": [
+            "<div class=\"list-group\">",
+                "\t<a href=\"#\" class=\"list-group-item list-group-item-action active\" aria-current=\"true\">",
+                    "\t\tThe current link item",
+                "\t</a>",
+                "\t<a href=\"#\" class=\"list-group-item list-group-item-action\">A second link item</a>",
+                "\t<a href=\"#\" class=\"list-group-item list-group-item-action\">A third link item</a>",
+                "\t<a href=\"#\" class=\"list-group-item list-group-item-action\">A fourth link item</a>",
+                "\t<a href=\"#\" class=\"list-group-item list-group-item-action disabled\" tabindex=\"-1\" aria-disabled=\"true\">A disabled link item</a>",
+            "</div>"
+        ],
+        "description": "b5-list-link"
+    },
+
+    "Bootstrap 5 List Button": {
+        "prefix": "b5-list-button",
+        "body": [
+            "<div class=\"list-group\">",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action active\" aria-current=\"true\">",
+                    "\t\tThe current button",
+                "\t</button>",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A second item</button>",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A third button item</button>",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A fourth button item</button>",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\" disabled>A disabled button item</button>",
+            "</div>"
+        ],
+        "description": "b5-list-button"
+    },
+
+    "Bootstrap 5 List Flush": {
+        "prefix": "b5-list-flush",
+        "body": [
+            "<ul class=\"list-group list-group-flush\">",
+                "\t<li class=\"list-group-item\">An item</li>",
+                "\t<li class=\"list-group-item\">A second item</li>",
+                "\t<li class=\"list-group-item\">A third item</li>",
+                "\t<li class=\"list-group-item\">A fourth item</li>",
+                "\t<li class=\"list-group-item\">And a fifth one</li>",
+            "</ul>"
+        ],
+        "description": "b5-list-flush"
+    },
+
+    "Bootstrap 5 List Numbered": {
+        "prefix": "b5-list-numbered",
+        "body": [
+            "<ol class=\"list-group list-group-numbered\">",
+                "\t<li class=\"list-group-item\">Cras justo odio</li>",
+                "\t<li class=\"list-group-item\">Cras justo odio</li>",
+                "\t<li class=\"list-group-item\">Cras justo odio</li>",
+            "</ol>"
+        ],
+        "description": "b5-list-numbered"
+    },
+
+    "Bootstrap 5 List Horizontal": {
+        "prefix": "b5-list-horizontal",
+        "body": [
+            "<ul class=\"list-group list-group-horizontal\">",
+                "\t<li class=\"list-group-item\">An item</li>",
+                "\t<li class=\"list-group-item\">A second item</li>",
+                "\t<li class=\"list-group-item\">A third item</li>",
+            "</ul>"
+        ],
+        "description": "b5-list-horizontal"
+    },
+
+    "Bootstrap 5 List Checkbox": {
+        "prefix": "b5-list-checkbox",
+        "body": [
+            "<div class=\"list-group\">",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"checkbox\" value=\"\">",
+                    "\t\tFirst checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"checkbox\" value=\"\">",
+                    "\t\tSecond checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"checkbox\" value=\"\">",
+                    "\t\tThird checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"checkbox\" value=\"\">",
+                    "\t\tFourth checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"checkbox\" value=\"\">",
+                    "\t\tFifth checkbox",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-list-checkbox"
+    },
+
+    "Bootstrap 5 List Radio": {
+        "prefix": "b5-list-radio",
+        "body": [
+            "<div class=\"list-group\">",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"radio\" name=\"list-radio\" value=\"\">",
+                    "\t\tFirst checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"radio\" name=\"list-radio\" value=\"\">",
+                    "\t\tSecond checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"radio\" name=\"list-radio\" value=\"\">",
+                    "\t\tThird checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"radio\" name=\"list-radio\" value=\"\">",
+                    "\t\tFourth checkbox",
+                "\t</label>",
+                "\t<label class=\"list-group-item\">",
+                    "\t\t<input class=\"form-check-input me-1\" type=\"radio\" name=\"list-radio\" value=\"\">",
+                    "\t\tFifth checkbox",
+                "\t</label>",
+            "</div>"
+        ],
+        "description": "b5-list-radio"
+    },
+
+    "Bootstrap 5 Modal": {
+        "prefix": "b5-modal",
+        "body": [
+            "<!-- Button trigger modal -->",
+            "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">",
+                "\tLaunch demo modal",
+            "</button>",
+
+            "\n<!-- Modal -->",
+            "<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">",
+                "\t<div class=\"modal-dialog ${1| ,modal-dialog-centered|} ${2| ,modal-dialog-scrollable|} ${3| ,modal-sm,modal-lg,modal-xl|} ${4| ,modal-fullscreen,modal-fullscreen-sm-down,modal-fullscreen-md-down,modal-fullscreen-lg-down,modal-fullscreen-xl-down,modal-fullscreen-xxl-down|}\">",
+                    "\t\t<div class=\"modal-content\">",
+                        "\t\t\t<div class=\"modal-header\">",
+                            "\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Modal title</h5>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"modal-body\">",
+                            "\t\t\t\t...",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"modal-footer\">",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-modal"
+    },
+
+    "Bootstrap 5 Modal Static Backdrop": {
+        "prefix": "b5-modal-static-backdrop",
+        "body": [
+            "<!-- Button trigger modal -->",
+            "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#staticBackdrop\">",
+                "\tLaunch static backdrop modal",
+            "</button>",
+
+            "\n<!-- Modal -->",
+            "<div class=\"modal fade\" id=\"staticBackdrop\" data-bs-backdrop=\"static\" data-bs-keyboard=\"false\" tabindex=\"-1\" aria-labelledby=\"staticBackdropLabel\" aria-hidden=\"true\">",
+                "\t<div class=\"modal-dialog ${1| ,modal-dialog-centered|} ${2| ,modal-dialog-scrollable|} ${3| ,modal-sm,modal-lg,modal-xl|} ${4| ,modal-fullscreen,modal-fullscreen-sm-down,modal-fullscreen-md-down,modal-fullscreen-lg-down,modal-fullscreen-xl-down,modal-fullscreen-xxl-down|}\">",
+                    "\t\t<div class=\"modal-content\">",
+                        "\t\t\t<div class=\"modal-header\">",
+                            "\t\t\t\t<h5 class=\"modal-title\" id=\"staticBackdropLabel\">Modal title</h5>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"modal-body\">",
+                            "\t\t\t\t...",
+                        "\t\t\t</div>",
+                        "\t\t\t<div class=\"modal-footer\">",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Understood</button>",
+                        "\t\t\t</div>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-modal-static-backdrop"
+    },
+
+    "Bootstrap 5 Nav Base": {
+        "prefix": "b5-nav-base",
+        "body": [
+            "<ul class=\"nav ${1| ,justify-content-center,justify-content-end|} ${2| ,flex-column|}\">",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+                "\t</li>",
+            "</ul>"
+        ],
+        "description": "b5-nav-base"
+    },
+
+    "Bootstrap 5 Nav": {
+        "prefix": "b5-nav",
+        "body": [
+            "<nav class=\"nav ${1| ,nav-tabs,nav-pills|} ${2| ,nav-fill,nav-justified|} ${3| ,justify-content-center,justify-content-end|} ${4| ,flex-column|}\">",
+                "\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
+                "\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+            "</nav>"
+        ],
+        "description": "b5-nav"
+    },
+
+    "Bootstrap 5 Nav Tab": {
+        "prefix": "b5-nav-tab",
+        "body": [
+            "<ul class=\"nav nav-tabs ${1| ,nav-fill,nav-justified|}\">",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+                "\t</li>",
+            "</ul>"
+        ],
+        "description": "b5-nav-tab"
+    },
+
+    "Bootstrap 5 Nav pill": {
+        "prefix": "b5-nav-pill",
+        "body": [
+            "<ul class=\"nav nav-pills ${1| ,nav-fill,nav-justified|}\">",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                "\t</li>",
+                "\t<li class=\"nav-item\">",
+                    "\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+                "\t</li>",
+            "</ul>"
+        ],
+        "description": "b5-nav-pill"
+    },
+
+    "Bootstrap 5 Navbar": {
+        "prefix": "b5-navbar",
+        "body": [
+            "<nav class=\"navbar navbar-expand-lg navbar-${1|light,dark|} bg-${2|primary,secondary,success,danger,warning,info,light,dark|}\">",
+                "\t<div class=\"container-fluid\">",
+                    "\t\t<a class=\"navbar-brand\" href=\"#\">Navbar</a>",
+                    "\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">",
+                        "\t\t\t<span class=\"navbar-toggler-icon\"></span>",
+                    "\t\t</button>",
+                    "\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">",
+                        "\t\t\t<ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">",
+                            "\t\t\t\t<li class=\"nav-item\">",
+                                "\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>",
+                            "\t\t\t\t</li>",
+                            "\t\t\t\t<li class=\"nav-item\">",
+                                "\t\t\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
+                            "\t\t\t\t</li>",
+                            "\t\t\t\t<li class=\"nav-item dropdown\">",
+                                "\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">",
+                                    "\t\t\t\t\t\tDropdown",
+                                "\t\t\t\t\t</a>",
+                                "\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">",
+                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
+                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
+                                    "\t\t\t\t\t\t<li><hr class=\"dropdown-divider\"></li>",
+                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
+                                "\t\t\t\t\t</ul>",
+                            "\t\t\t\t</li>",
+                            "\t\t\t\t<li class=\"nav-item\">",
+                                "\t\t\t\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
+                            "\t\t\t\t</li>",
+                        "\t\t\t</ul>",
+                        "\t\t\t<form class=\"d-flex\">",
+                            "\t\t\t\t<input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">",
+                            "\t\t\t\t<button class=\"btn btn-outline-success\" type=\"submit\">Search</button>",
+                        "\t\t\t</form>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</nav>"
+        ],
+        "description": "b5-navbar"
+    },
+
+    "Bootstrap 5 Offcanvas": {
+        "prefix": "b5-offcanvas",
+        "body": [
+            "<a class=\"btn btn-primary\" data-bs-toggle=\"offcanvas\" href=\"#offcanvasExample\" role=\"button\" aria-controls=\"offcanvasExample\">",
+                "\tLink with href",
+            "</a>",
+            "<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"offcanvas\" data-bs-target=\"#offcanvasExample\" aria-controls=\"offcanvasExample\">",
+                "\tButton with data-bs-target",
+            "</button>",
+
+            "\n<div class=\"offcanvas offcanvas-${1|start,end,top,bottom|}\" data-bs-scroll=\"${2|true,false|}\" data-bs-backdrop=\"${3|true,false|}\" tabindex=\"-1\" id=\"offcanvasExample\" aria-labelledby=\"offcanvasExampleLabel\">",
+                "\t<div class=\"offcanvas-header\">",
+                    "\t\t<h5 class=\"offcanvas-title\" id=\"offcanvasExampleLabel\">Offcanvas</h5>",
+                    "\t\t<button type=\"button\" class=\"btn-close text-reset\" data-bs-dismiss=\"offcanvas\" aria-label=\"Close\"></button>",
+                "\t</div>",
+                "\t<div class=\"offcanvas-body\">",
+                    "\t\t<div>",
+                        "\t\t\tSome text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.",
+                    "\t\t</div>",
+                    "\t\t<div class=\"dropdown mt-3\">",
+                        "\t\t\t<button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-bs-toggle=\"dropdown\">",
+                            "\t\t\t\tDropdown button",
+                        "\t\t\t</button>",
+                        "\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">",
+                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
+                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
+                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
+                        "\t\t\t</ul>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>"
+        ],
+        "description": "b5-offcanvas"
+    },
+
+    "Bootstrap 5 Pagination": {
+        "prefix": "b5-pagination",
+        "body": [
+            "<nav aria-label=\"Page navigation example\">",
+                "\t<ul class=\"pagination justify-content-${1|start,center,end|}\">",
+                    "\t\t<li class=\"page-item disabled\">",
+                        "\t\t\t<a class=\"page-link\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Previous</a>",
+                    "\t\t</li>",
+                    "\t\t<li class=\"page-item active\"><a class=\"page-link\" href=\"#\">1</a></li>",
+                    "\t\t<li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>",
+                    "\t\t<li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>",
+                    "\t\t<li class=\"page-item\">",
+                        "\t\t\t<a class=\"page-link\" href=\"#\">Next</a>",
+                    "\t\t</li>",
+                "\t</ul>",
+            "</nav>"
+        ],
+        "description": "b5-pagination"
+    },
+
+    "Bootstrap 5 Popover": {
+        "prefix": "b5-popover",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"popover\" data-bs-placement=\"${1|top,right,bottom,left|}\" title=\"${2:Popover title}\" data-bs-content=\"${3:And here's some amazing content. It's very engaging. Right?}\">${4:Click to toggle popover}</button>",
+
+            "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
+            "<script>",
+                "\tvar popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]'));",
+                "\tvar popoverList = popoverTriggerList.map(function (popoverTriggerEl) {",
+                    "\t\treturn new bootstrap.Popover(popoverTriggerEl);",
+                "\t});",
+            "</script>"
+        ],
+        "description": "b5-popover"
+    },
+
+    "Bootstrap 5 Popover Dismissible": {
+        "prefix": "b5-popover-dismissible",
+        "body": [
+            "<a tabindex=\"0\" class=\"btn btn-primary\" role=\"button\" data-bs-toggle=\"popover\" data-bs-placement=\"${1|top,right,bottom,left|}\" data-bs-trigger=\"focus\" title=\"${2:Dismissible popover}\" data-bs-content=\"${3:And here's some amazing content. It's very engaging. Right?}\">${4:Dismissible popover}</a>",
+
+            "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
+            "<script>",
+                "\tvar popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]'));",
+                "\tvar popoverList = popoverTriggerList.map(function (popoverTriggerEl) {",
+                    "\t\treturn new bootstrap.Popover(popoverTriggerEl);",
+                "\t});",
+            "</script>"
+        ],
+        "description": "b5-popover-dismissible"
+    },
+
+    "Bootstrap 5 Popover Disable": {
+        "prefix": "b5-popover-disable",
+        "body": [
+            "<span class=\"d-inline-block\" tabindex=\"0\" data-bs-toggle=\"popover\" data-bs-placement=\"${1|top,right,bottom,left|}\" data-bs-trigger=\"hover focus\" data-bs-content=\"${2:Disabled popover}\">",
+                "\t<button class=\"btn btn-primary\" type=\"button\" disabled>Disabled button</button>",
+            "</span>",
+
+            "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
+            "<script>",
+                "\tvar popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"popover\"]'));",
+                "\tvar popoverList = popoverTriggerList.map(function (popoverTriggerEl) {",
+                    "\t\treturn new bootstrap.Popover(popoverTriggerEl);",
+                "\t});",
+            "</script>"
+        ],
+        "description": "b5-popover-disable"
+    },
+
+    "Bootstrap 5 Progress": {
+        "prefix": "b5-progress",
+        "body": [
+            "<div class=\"progress\">",
+                "\t<div class=\"progress-bar bg-${2|primary,secondary,success,danger,warning,info,light,dark|} ${3|progress-bar-striped, |} ${4|progress-bar-animated, |}\" role=\"progressbar\" style=\"width: ${1:25}%;\" aria-valuenow=\"${1:25}\" aria-valuemin=\"0\" aria-valuemax=\"100\">${1:25}%</div>",
+            "</div>"
+        ],
+        "description": "b5-progress"
+    },
+
+    "Bootstrap 5 Progress Multiple": {
+        "prefix": "b5-progress-multiple",
+        "body": [
+            "<div class=\"progress\">",
+                "\t<div class=\"progress-bar\" role=\"progressbar\" style=\"width: 15%\" aria-valuenow=\"15\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>",
+                "\t<div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 30%\" aria-valuenow=\"30\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>",
+                "\t<div class=\"progress-bar bg-info\" role=\"progressbar\" style=\"width: 20%\" aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>",
+            "</div>"
+        ],
+        "description": "b5-progress-multiple"
+    },
+
+    "Bootstrap 5 Spinner": {
+        "prefix": "b5-spinner",
+        "body": [
+            "<div class=\"spinner-border text-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"status\">",
+                "\t<span class=\"visually-hidden\">${2:Loading...}</span>",
+            "</div>"
+        ],
+        "description": "b5-spinner"
+    },
+
+    "Bootstrap 5 Spinner Growing": {
+        "prefix": "b5-spinner-growing",
+        "body": [
+            "<div class=\"spinner-grow text-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"status\">",
+                "\t<span class=\"visually-hidden\">${2:Loading...}</span>",
+            "</div>"
+        ],
+        "description": "b5-spinner-growing"
+    },
+    
+    "Bootstrap 5 Spinner Buttons": {
+        "prefix": "b5-spinner-buttons",
+        "body": [
+            "<button class=\"btn btn-primary\" type=\"button\" disabled>",
+            "\t<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+            "\t<span class=\"visually-hidden\">Loading...</span>",
+            "</button>",
+            "<button class=\"btn btn-primary\" type=\"button\" disabled>",
+            "\t<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+            "\tLoading...",
+            "</button>"
+        ],
+        "description": "b5-spinner-buttons"
+    },
+
+    "Bootstrap 5 Spinner Growing Buttons": {
+        "prefix": "b5-spinner-growing-buttons",
+        "body": [
+            "<button class=\"btn btn-primary\" type=\"button\" disabled>",
+                "\t<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+                "\t<span class=\"visually-hidden\">Loading...</span>",
+            "</button>",
+            "<button class=\"btn btn-primary\" type=\"button\" disabled>",
+                "\t<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+                "\tLoading...",
+            "</button>"
+        ],
+        "description": "b5-spinner-growing-buttons"
+    },
+
+    "Bootstrap 5 Toasts": {
+        "prefix": "b5-toast",
+        "body": [
+            "<button type=\"button\" onclick=\"showToast()\" class=\"btn btn-primary\" id=\"liveToastBtn\">Show live toast</button>",
+
+            "\n<div class=\"position-fixed bottom-0 end-0 p-3\" style=\"z-index: 11\">",
+                "\t<div id=\"liveToast\" class=\"toast hide\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">",
+                    "\t\t<div class=\"toast-header\">",
+                        "\t\t\t<img src=\"...\" class=\"rounded me-2\" alt=\"...\">",
+                        "\t\t\t<strong class=\"me-auto\">Bootstrap</strong>",
+                        "\t\t\t<small>11 mins ago</small>",
+                        "\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>",
+                    "\t\t</div>",
+                    "\t\t<div class=\"toast-body\">",
+                        "\t\t\tHello, world! This is a toast message.",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>",
+
+            "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
+            "<script>",
+                "\tfunction showToast() {",
+                    "\t\tvar toastDOMElement = document.getElementById(\"liveToast\");",
+                    "\t\tvar myToast = new bootstrap.Toast(toastDOMElement);",
+                    "\t\tmyToast.show();",
+                "\t}",
+            "</script>"
+        ],
+        "description": "b5-toast"
+    },
+
+    "Bootstrap 5 Toasts Custom": {
+        "prefix": "b5-toast-custom",
+        "body": [
+            "<button type=\"button\" onclick=\"showToast()\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark|}\" id=\"liveToastBtn\">Show live toast</button>",
+
+            "\n<div class=\"position-fixed bottom-0 end-0 p-3\" style=\"z-index: 11\">",
+                "\t<div id=\"liveToast\" class=\"toast align-items-center text-${2|white,dark|} bg-${1|primary,secondary,success,danger,warning,info,light,dark|} border-0\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true\">",
+                    "\t\t<div class=\"d-flex\">",
+                        "\t\t\t<div class=\"toast-body\">",
+                            "\t\t\t\tHello, world! This is a toast message.",
+                        "\t\t\t</div>",
+                        "\t\t\t<button type=\"button\" class=\"btn-close btn-close-white me-2 m-auto\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>",
+                    "\t\t</div>",
+                "\t</div>",
+            "</div>",
+
+            "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
+            "<script>",
+                "\tfunction showToast() {",
+                    "\t\tvar toastDOMElement = document.getElementById(\"liveToast\");",
+                    "\t\tvar myToast = new bootstrap.Toast(toastDOMElement);",
+                    "\t\tmyToast.show();",
+                "\t}",
+            "</script>"
+        ],
+        "description": "b5-toast-custom"
+    },
+
+    "Bootstrap 5 Tooltips": {
+        "prefix": "b5-tooltip",
+        "body": [
+            "<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"tooltip\" data-bs-placement=\"${1|top,right,bottom,left|}\" title=\"Tooltip on ${1|top,right,bottom,left|}\">",
+                "Tooltip on ${1|top,right,bottom,left|}",
+            "</button>",
+
+            "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
+            "<script>",
+                "\tvar tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"tooltip\"]'))",
+                "\tvar tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {",
+                    "\treturn new bootstrap.Tooltip(tooltipTriggerEl)",
+                "\t})",
+            "</script>"
+        ],
+        "description": "b5-tooltip"
+    }
+}
