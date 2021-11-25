@@ -233,8 +233,8 @@
         "prefix": "b5-form-textarea",
         "body": [
             ".mb-3",
-                    "\tlabel.form-label(for=\"${2:exampleFormControlTextarea1}\") ${1:Example textarea}",
-                    "\ttextarea.form-control#${2:exampleFormControlTextarea1}(rows=\"${3:3}\")",
+                "\tlabel.form-label(for=\"${2:exampleFormControlTextarea1}\") ${1:Example textarea}",
+                "\ttextarea.form-control#${2:exampleFormControlTextarea1}(rows=\"${3:3}\")",
         ],
         "description": "b5-form-textarea"
     },
@@ -286,11 +286,11 @@
     "Bootstrap 5 Select Size": {
         "prefix": "b5-select-size",
         "body": [
-            "select class=\"form-select form-select-${1|sm,lg|}\" aria-label=\".form-select-${1|sm,lg|} example",
-                "\toption selected>${2:Open this select menu}",
-                "\toption value=\"1 ${3:One}",
-                "\toption value=\"2 ${4:Two}",
-                "\toption value=\"3 ${5:Three}",
+            "select.form-select.form-select-${1|sm,lg|}(aria-label=\".form-select-${1|sm,lg|} example\")",
+                "\toption(selected) ${2:Open this select menu}",
+                "\toption(value=\"1\") ${3:One}",
+                "\toption(value=\"2\") ${4:Two}",
+                "\toption(value=\"3\") ${5:Three}",
         ],
         "description": "b5-select-size"
     },
@@ -298,11 +298,11 @@
     "Bootstrap 5 Select Multiple": {
         "prefix": "b5-select-multiple",
         "body": [
-            "select class=\"form-select\" ${1|multiple,size=\"3\"|} aria-label=\"multiple select example",
-                "\toption selected>${2:Open this select menu}",
-                "\toption value=\"1 ${3:One}",
-                "\toption value=\"2 ${4:Two}",
-                "\toption value=\"3 ${5:Three}",
+            "select.form-select(${1|multiple,size=\"3\"|} aria-label=\"multiple select example\")",
+                "\toption(selected) ${2:Open this select menu}",
+                "\toption(value=\"1\") ${3:One}",
+                "\toption(value=\"2\") ${4:Two}",
+                "\toption(value=\"3\") ${5:Three}",
         ],
         "description": "b5-select-multiple"
     },
@@ -310,11 +310,11 @@
     "Bootstrap 5 Select Disable": {
         "prefix": "b5-select-disable",
         "body": [
-            "select class=\"form-select\" aria-label=\"Disabled select example\" disabled>",
-                "\toption selected>${1:Open this select menu}",
-                "\toption value=\"1 ${2:One}",
-                "\toption value=\"2 ${3:Two}",
-                "\toption value=\"3 ${4:Three}",
+            "select.form-select(aria-label=\"Disabled select example\" disabled)",
+                "\toption(selected) ${2:Open this select menu}",
+                "\toption(value=\"1\") ${3:One}",
+                "\toption(value=\"2\") ${4:Two}",
+                "\toption(value=\"3\") ${5:Three}",
         ],
         "description": "b5-select-disable"
     },
@@ -323,9 +323,8 @@
         "prefix": "b5-checkbox-default",
         "body": [
             ".form-check",
-                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckDefault}",
-                "\t<label class=\"form-check-label\" for=\"${1:flexCheckDefault}",
-                    "\t\t${2:Default checkbox}",
+                "\tinput.form-check-input#${1:flexCheckDefault}(type=\"checkbox\" value=\"\")",
+                "\tlabel.form-check-label(for=\"${1:flexCheckDefault}\") ${2:Default checkbox}",
         ],
         "description": "b5-checkbox-default"
     },
@@ -334,9 +333,8 @@
         "prefix": "b5-checkbox-default-check",
         "body": [
             ".form-check",
-                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${3:flexCheckChecked}\" checked>",
-                "\t<label class=\"form-check-label\" for=\"${3:flexCheckChecked}",
-                    "\t\t${4:Checked checkbox}",
+                "\tinput.form-check-input#${3:flexCheckChecked}(type=\"checkbox\" value=\"\" checked)",
+                "\tlabel.form-check-label(for=\"${3:flexCheckChecked}\") ${4:Checked checkbox}",
         ],
         "description": "b5-checkbox-default-check"
     },
@@ -345,14 +343,12 @@
         "prefix": "b5-checkbox-indeterminate",
         "body": [
             ".form-check",
-                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckIndeterminate}",
-                "\t<label class=\"form-check-label\" for=\"${1:flexCheckIndeterminate}",
-                    "\t\t${2:Indeterminate checkbox}",
+                "\tinput.form-check-input#${1:flexCheckIndeterminate}(type=\"checkbox\" value=\"\")",
+                "\tlabel.form-check-label(for=\"${1:flexCheckIndeterminate}\") ${2:Indeterminate checkbox}",
             "<!-- Javascript for indeterminate checkbox -->",
-            "<script>",
+            "script.",
                 "\tvar checkbox = document.getElementById(\"${1:flexCheckIndeterminate}\");",
                 "\tcheckbox.indeterminate = true;",
-            "</script>"
         ],
         "description": "b5-checkbox-indeterminate"
     },
@@ -361,9 +357,8 @@
         "prefix": "b5-checkbox-disable-uncheck",
         "body": [
             ".form-check",
-                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckDisabled}\" disabled>",
-                "\t<label class=\"form-check-label\" for=\"${1:flexCheckDisabled}",
-                    "\t\t${2:Disabled checkbox}",
+                "\tinput.form-check-input#${1:flexCheckDisabled}(type=\"checkbox\" value=\"\" disabled)",
+                "\tlabel.form-check-label(for=\"${1:flexCheckDisabled}\") ${2:Disabled checkbox}",
         ],
         "description": "b5-checkbox-disable-uncheck"
     },
@@ -372,9 +367,8 @@
         "prefix": "b5-checkbox-disable-check",
         "body": [
             ".form-check",
-                "\t<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"${1:flexCheckCheckedDisabled}\" checked disabled>",
-                "\t<label class=\"form-check-label\" for=\"${31:flexCheckCheckedDisabled}",
-                    "\t\t${2:Disabled checked checkbox}",
+                "\tinput.form-check-input#${1:flexCheckCheckedDisabled}(type=\"checkbox\" value=\"\" checked disabled)",
+                "\tlabel.form-check-label(for=\"${1:flexCheckCheckedDisabled}\") ${2:Disabled checked checkbox}",
         ],
         "description": "b5-checkbox-disable-check"
     },
@@ -383,9 +377,8 @@
         "prefix": "b5-radio-default",
         "body": [
             ".form-check",
-                "\t<input class=\"form-check-input\" type=\"radio\" name=\"${2:flexRadioDefaultName}\" id=\"${1:flexRadioDefault}",
-                "\t<label class=\"form-check-label\" for=\"${1:flexRadioDefault}",
-                    "\t\t${3:Default radio}",
+                "\tinput.form-check-input#${1:flexRadioDefault}(type=\"radio\" name=\"${2:flexRadioDefaultName}\")",
+                "\tlabel.form-check-label(for=\"${1:flexRadioDefault}\") ${3:Default radio}",
         ],
         "description": "b5-radio-default"
     },
@@ -553,7 +546,7 @@
         "prefix": "b5-addon-default",
         "body": [
             ".input-group mb-3",
-                "\t<span class=\"input-group-text\" id=\"${1:inputGroup-sizing-default}\">Default</span>",
+                "\t<span class=\"input-group-text\" id=\"${1:inputGroup-sizing-default}\">Default",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"Sizing example input\" aria-describedby=\"${1:inputGroup-sizing-default}",
         ],
         "description": "b5-addon-default"
@@ -563,7 +556,7 @@
         "prefix": "b5-addon-size",
         "body": [
             ".input-group input-group-${1|sm,lg|} mb-3",
-                "\t<span class=\"input-group-text\" id=\"inputGroup-sizing-${1|sm,lg|} ${2:Small or Large}</span>",
+                "\t<span class=\"input-group-text\" id=\"inputGroup-sizing-${1|sm,lg|} ${2:Small or Large}",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"Sizing example input\" aria-describedby=\"inputGroup-sizing-${1|sm,lg|}",
         ],
         "description": "b5-addon-size"
@@ -595,7 +588,7 @@
         "prefix": "b5-addon-multi-input",
         "body": [
             ".input-group",
-                "\t<span class=\"input-group-text ${1:First and last name}</span>",
+                "\t<span class=\"input-group-text ${1:First and last name}",
                 "\t<input type=\"text\" aria-label=\"${2:First name}\" class=\"form-control",
                 "\t<input type=\"text\" aria-label=\"${3:Last name}\" class=\"form-control",
         ],
@@ -606,8 +599,8 @@
         "prefix": "b5-addon-multi-start",
         "body": [
             ".input-group mb-3",
-                "\t<span class=\"input-group-text ${1:$}</span>",
-                "\t<span class=\"input-group-text ${2:0.00}</span>",
+                "\t<span class=\"input-group-text ${1:$}",
+                "\t<span class=\"input-group-text ${2:0.00}",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${3:Dollar amount (with dot and two decimal places)}",
         ],
         "description": "b5-addon-multi-start"
@@ -618,8 +611,8 @@
         "body": [
             ".input-group",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${1:Dollar amount (with dot and two decimal places)}",
-                "\t<span class=\"input-group-text ${2:$}</span>",
-                "\t<span class=\"input-group-text ${3:0.00}</span>",
+                "\t<span class=\"input-group-text ${2:$}",
+                "\t<span class=\"input-group-text ${3:0.00}",
         ],
         "description": "b5-addon-multi-end"
     },
@@ -628,7 +621,7 @@
         "prefix": "b5-addon-btn-start",
         "body": [
             ".input-group mb-3",
-                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:button-addon1} ${2:Button}</button>",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:button-addon1} ${2:Button}",
                 "\t<input type=\"text\" class=\"form-control\" placeholder=\"\" aria-label=\"Example text with button addon\" aria-describedby=\"${1:button-addon1}",
         ],
         "description": "b5-addon-btn-start"
@@ -639,7 +632,7 @@
         "body": [
             ".input-group mb-3",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"Recipient's username\" aria-describedby=\"${1:button-addon2}",
-                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:button-addon2} ${2:Button}</button>",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:button-addon2} ${2:Button}",
         ],
         "description": "b5-addon-btn-end"
     },
@@ -648,14 +641,14 @@
         "prefix": "b5-addon-dropdwn-start",
         "body": [
             ".input-group mb-3",
-                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${1:Dropdown}</button>",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${1:Dropdown}",
                 "\t<ul class=\"dropdown-menu",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${2:Action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Another action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Something else here}</a></li>",
-                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Separated link}</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${2:Action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Another action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Something else here}",
+                    "\t\t<li><hr class=\"dropdown-divider\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Separated link}",
+                "\t",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${6:Text input with dropdown button}",
         ],
         "description": "b5-addon-dropdwn-start"
@@ -666,14 +659,14 @@
         "body": [
             ".input-group mb-3",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${1:Text input with dropdown button}",
-                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${2:Dropdown}</button>",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${2:Dropdown}",
                 "\t<ul class=\"dropdown-menu dropdown-menu-end",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Another action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Something else here}</a></li>",
-                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${6:Separated link}</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Another action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Something else here}",
+                    "\t\t<li><hr class=\"dropdown-divider\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${6:Separated link}",
+                "\t",
         ],
         "description": "b5-addon-dropdwn-end"
     },
@@ -682,23 +675,23 @@
         "prefix": "b5-addon-dropdwn-sides",
         "body": [
             ".input-group",
-                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${1:Dropdown}</button>",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${1:Dropdown}",
                 "\t<ul class=\"dropdown-menu",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${2:Action before}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Another action before}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Something else here}</a></li>",
-                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Separated link}</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${2:Action before}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Another action before}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Something else here}",
+                    "\t\t<li><hr class=\"dropdown-divider\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Separated link}",
+                "\t",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${6:Text input with 2 dropdown buttons}",
-                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${7:Dropdown}</button>",
+                "\t<button class=\"btn btn-outline-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false ${7:Dropdown}",
                 "\t<ul class=\"dropdown-menu dropdown-menu-end",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${8:Action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${9:Another action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${10:Something else here}</a></li>",
-                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${11:Separated link}</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${8:Action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${9:Another action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${10:Something else here}",
+                    "\t\t<li><hr class=\"dropdown-divider\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${11:Separated link}",
+                "\t",
         ],
         "description": "b5-addon-dropdwn-sides"
     },
@@ -707,17 +700,17 @@
         "prefix": "b5-segment-btn-start",
         "body": [
             ".input-group mb-3",
-                "\t<button type=\"button\" class=\"btn btn-outline-secondary ${1:Action}</button>",
+                "\t<button type=\"button\" class=\"btn btn-outline-secondary ${1:Action}",
                 "\t<button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false",
-                    "\t\t<span class=\"visually-hidden ${2:Toggle Dropdown}</span>",
-                "\t</button>",
+                    "\t\t<span class=\"visually-hidden ${2:Toggle Dropdown}",
+                "\t",
                 "\t<ul class=\"dropdown-menu",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Another action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Something else here}</a></li>",
-                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${6:Separated link}</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${3:Action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Another action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Something else here}",
+                    "\t\t<li><hr class=\"dropdown-divider\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${6:Separated link}",
+                "\t",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${7:Text input with segmented dropdown button}",
         ],
         "description": "b5-segment-btn-start"
@@ -728,17 +721,17 @@
         "body": [
             ".input-group",
                 "\t<input type=\"text\" class=\"form-control\" aria-label=\"${1:Text input with segmented dropdown button}",
-                "\t<button type=\"button\" class=\"btn btn-outline-secondary ${2:Action}</button>",
+                "\t<button type=\"button\" class=\"btn btn-outline-secondary ${2:Action}",
                 "\t<button type=\"button\" class=\"btn btn-outline-secondary dropdown-toggle dropdown-toggle-split\" data-bs-toggle=\"dropdown\" aria-expanded=\"false",
-                    "\t\t<span class=\"visually-hidden ${3:Toggle Dropdown}</span>",
-                "\t</button>",
+                    "\t\t<span class=\"visually-hidden ${3:Toggle Dropdown}",
+                "\t",
                 "\t<ul class=\"dropdown-menu dropdown-menu-end",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Another action}</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${6:Something else here}</a></li>",
-                    "\t\t<li><hr class=\"dropdown-divider\"></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${7:Separated link}</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${4:Action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${5:Another action}",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${6:Something else here}",
+                    "\t\t<li><hr class=\"dropdown-divider\">",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"# ${7:Separated link}",
+                "\t",
         ],
         "description": "b5-segment-btn-end"
     },
@@ -753,7 +746,7 @@
                     "\t\toption value=\"1 ${4:One}",
                     "\t\toption value=\"2 ${5:Two}",
                     "\t\toption value=\"3 ${6:Three}",
-                "\t</select>",
+                "\t",
         ],
         "description": "b5-custom-select-label"
     },
@@ -762,13 +755,13 @@
         "prefix": "b5-custom-select-btn",
         "body": [
             ".input-group mb-3",
-                "\t<button class=\"btn btn-outline-secondary\" type=\"button ${1:Button}</button>",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button ${1:Button}",
                 "\tselect class=\"form-select\" id=\"${2:inputGroupSelect03}\" aria-label=\"${3:Example select with button addon}",
                     "\t\toption selected>${4:Choose...}",
                     "\t\toption value=\"1 ${5:One}",
                     "\t\toption value=\"2 ${6:Two}",
                     "\t\toption value=\"3 ${7:Three}",
-                "\t</select>",
+                "\t",
         ],
         "description": "b5-custom-select-btn"
     },
@@ -787,7 +780,7 @@
         "prefix": "b5-custom-file-btn",
         "body": [
             ".input-group mb-3",
-                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:inputGroupFileAddon03} ${2:Button}</button>",
+                "\t<button class=\"btn btn-outline-secondary\" type=\"button\" id=\"${1:inputGroupFileAddon03} ${2:Button}",
                 "\t<input type=\"file\" class=\"form-control\" id=\"${3:inputGroupFile03}\" aria-describedby=\"${1:inputGroupFileAddon03}\" aria-label=\"Upload",
         ],
         "description": "b5-custom-file-btn"
@@ -817,7 +810,7 @@
         "prefix": "b5-form-float-textarea",
         "body": [
             ".form-floating",
-                "\t<textarea class=\"form-control\" placeholder=\"${1:Leave a comment here}\" id=\"${2:floatingTextarea}\"></textarea>",
+                "\t<textarea class=\"form-control\" placeholder=\"${1:Leave a comment here}\" id=\"${2:floatingTextarea}\">",
                 "\t<label for=\"${2:floatingTextarea} ${3:Comments}",
         ],
         "description": "b5-form-float-textarea"
@@ -832,7 +825,7 @@
                     "\t\toption value=\"1 ${4:One}",
                     "\t\toption value=\"2 ${5:Two}",
                     "\t\toption value=\"3 ${6:Three}",
-                "\t</select>",
+                "\t",
                 "\t<label for=\"${1:floatingSelect} ${7:Works with selects}",
         ],
         "description": "b5-form-float-select"
@@ -846,24 +839,24 @@
                     "\t\t<h2 class=\"accordion-header\" id=\"flush-headingOne",
                         "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#flush-collapseOne\" aria-expanded=\"false\" aria-controls=\"flush-collapseOne",
                             "\t\t\t\t${1:Accordion Item #1}",
-                        "\t\t\t</button>",
-                    "\t\t</h2>",
+                        "\t\t\t",
+                    "\t\t",
                     "\t\tid=\"flush-collapseOne\" class=\"accordion-collapse collapse\" aria-labelledby=\"flush-headingOne\" data-bs-parent=\"#accordionFlushExample",
                         "\t\t\t.accordion-body ${2:Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.}",
                 "\t.accordion-item",
                     "\t\t<h2 class=\"accordion-header\" id=\"flush-headingTwo",
                         "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#flush-collapseTwo\" aria-expanded=\"false\" aria-controls=\"flush-collapseTwo",
                             "\t\t\t\t${3:Accordion Item #2}",
-                        "\t\t\t</button>",
-                    "\t\t</h2>",
+                        "\t\t\t",
+                    "\t\t",
                     "\t\tid=\"flush-collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"flush-headingTwo\" data-bs-parent=\"#accordionFlushExample",
                         "\t\t\t.accordion-body ${4:Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.}",
                 "\t.accordion-item",
                     "\t\t<h2 class=\"accordion-header\" id=\"flush-headingThree",
                         "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#flush-collapseThree\" aria-expanded=\"false\" aria-controls=\"flush-collapseThree",
                             "\t\t\t\t${5:Accordion Item #3}",
-                        "\t\t\t</button>",
-                    "\t\t</h2>",
+                        "\t\t\t",
+                    "\t\t",
                     "\t\tid=\"flush-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"flush-headingThree\" data-bs-parent=\"#accordionFlushExample",
                         "\t\t\t.accordion-body ${6:Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.}",
         ],
@@ -878,8 +871,8 @@
                     "\t\t<h2 class=\"accordion-header\" id=\"panelsStayOpen-headingOne",
                         "\t\t\t<button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#panelsStayOpen-collapseOne\" aria-expanded=\"true\" aria-controls=\"panelsStayOpen-collapseOne",
                             "\t\t\t\t${1:Accordion Item #1}",
-                        "\t\t\t</button>",
-                    "\t\t</h2>",
+                        "\t\t\t",
+                    "\t\t",
                     "\t\tid=\"panelsStayOpen-collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"panelsStayOpen-headingOne",
                         "\t\t\t.accordion-body",
                             "\t\t\t\t${2:<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.}",
@@ -888,8 +881,8 @@
                     "\t\t<h2 class=\"accordion-header\" id=\"panelsStayOpen-headingTwo",
                         "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#panelsStayOpen-collapseTwo\" aria-expanded=\"false\" aria-controls=\"panelsStayOpen-collapseTwo",
                             "\t\t\t\t${3:Accordion Item #2}",
-                        "\t\t\t</button>",
-                    "\t\t</h2>",
+                        "\t\t\t",
+                    "\t\t",
                     "\t\tid=\"panelsStayOpen-collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"panelsStayOpen-headingTwo",
                         "\t\t\t.accordion-body",
                             "\t\t\t\t${4:<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.}",
@@ -898,8 +891,8 @@
                     "\t\t<h2 class=\"accordion-header\" id=\"panelsStayOpen-headingThree",
                         "\t\t\t<button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#panelsStayOpen-collapseThree\" aria-expanded=\"false\" aria-controls=\"panelsStayOpen-collapseThree",
                             "\t\t\t\t${5:Accordion Item #3}",
-                        "\t\t\t</button>",
-                    "\t\t</h2>",
+                        "\t\t\t",
+                    "\t\t",
                     "\t\tid=\"panelsStayOpen-collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"panelsStayOpen-headingThree",
                         "\t\t\t.accordion-body",
                             "\t\t\t\t${6:<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.}",
@@ -943,7 +936,7 @@
         "body": [
             ".alert alert-warning alert-dismissible fade show\" role=\"alert",
                 "\t<strong>${1:Holy guacamole!}</strong>${2: You should check in on some of those fields below.}",
-                "\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>",
+                "\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\">",
         ],
         "description": "b5-alert-dismiss"
     },
@@ -951,7 +944,7 @@
     "Bootstrap 5 Badge": {
         "prefix": "b5-badge",
         "body": [
-            "<${1|h1,h2,h3,h4,h5,h6|}>Example heading <span class=\"badge bg-secondary\">New</span></${1|h1,h2,h3,h4,h5,h6|}>"
+            "<${1|h1,h2,h3,h4,h5,h6|}>Example heading <span class=\"badge bg-secondary\">New</${1|h1,h2,h3,h4,h5,h6|}>"
         ],
         "description": "b5-badge"
     },
@@ -960,8 +953,8 @@
         "prefix": "b5-badge-button",
         "body": [
             "<button type=\"button\" class=\"btn btn-primary",
-                "\tNotifications <span class=\"badge bg-secondary\">4</span>",
-            "</button>"
+                "\tNotifications <span class=\"badge bg-secondary\">4",
+            ""
         ],
         "description": "b5-badge-button"
     },
@@ -973,9 +966,9 @@
                 "\tInbox",
                 "\t<span class=\"position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger",
                     "\t\t99+",
-                    "\t\t<span class=\"visually-hidden\">unread messages</span>",
-                "\t</span>",
-            "</button>"
+                    "\t\t<span class=\"visually-hidden\">unread messages",
+                "\t",
+            ""
         ],
         "description": "b5-badge-positioned-count"
     },
@@ -986,9 +979,9 @@
             "<button type=\"button\" class=\"btn btn-primary position-relative",
                 "\tProfile",
                 "\t<span class=\"position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle",
-                    "\t\t<span class=\"visually-hidden\">New alerts</span>",
-                "\t</span>",
-            "</button>"
+                    "\t\t<span class=\"visually-hidden\">New alerts",
+                "\t",
+            ""
         ],
         "description": "b5-badge-positioned"
     },
@@ -998,9 +991,9 @@
         "body": [
             "<nav aria-label=\"breadcrumb",
                 "\t<ol class=\"breadcrumb",
-                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
-                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Library</a></li>",
-                    "\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Data</li>",
+                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home",
+                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Library",
+                    "\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Data",
                 "\t</ol>",
             "</nav>"
         ],
@@ -1012,8 +1005,8 @@
         "body": [
             "<nav style=\"--bs-breadcrumb-divider: '${1:>}';\" aria-label=\"breadcrumb",
                 "\t<ol class=\"breadcrumb",
-                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>",
-                    "\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Library</li>",
+                    "\t\t<li class=\"breadcrumb-item\"><a href=\"#\">Home",
+                    "\t\t<li class=\"breadcrumb-item active\" aria-current=\"page\">Library",
                 "\t</ol>",
             "</nav>"
         ],
@@ -1023,7 +1016,7 @@
     "Bootstrap 5 Buttons": {
         "prefix": "b5-button",
         "body": [
-            "<button type=\"button\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|} ${2:Button}</button>"
+            "<button type=\"button\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|} ${2:Button}"
         ],
         "description": "b5-button"
     },
@@ -1031,7 +1024,7 @@
     "Bootstrap 5 Outline Buttons": {
         "prefix": "b5-outline-button",
         "body": [
-            "<button type=\"button\" class=\"btn btn-outline-${1|primary,secondary,success,danger,warning,info,light,dark|}\">Outline Button</button>"
+            "<button type=\"button\" class=\"btn btn-outline-${1|primary,secondary,success,danger,warning,info,light,dark|}\">Outline Button"
         ],
         "description": "b5-outline-button"
     },
@@ -1039,7 +1032,7 @@
     "Bootstrap 5 Button Size": {
         "prefix": "b5-button-size",
         "body": [
-            "<button type=\"button\" class=\"btn btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|} btn-${1|lg,sm|}\">Size button</button>"
+            "<button type=\"button\" class=\"btn btn-${2|primary,secondary,success,danger,warning,info,light,dark,link|} btn-${1|lg,sm|}\">Size button"
         ],
         "description": "b5-button-size"
     },
@@ -1048,8 +1041,8 @@
         "prefix": "b5-button-block",
         "body": [
             ".d-grid gap-2",
-                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
-                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button",
         ],
         "description": "b5-button-block"
     },
@@ -1058,8 +1051,8 @@
         "prefix": "b5-button-block-responsive",
         "body": [
             ".d-grid gap-2 d-md-block",
-                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
-                "\t<button class=\"btn btn-primary\" type=\"button\">Button</button>",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button",
+                "\t<button class=\"btn btn-primary\" type=\"button\">Button",
         ],
         "description": "b5-button-block-responsive"
     },
@@ -1068,9 +1061,9 @@
         "prefix": "b5-button-group",
         "body": [
             ".btn-group\" role=\"group\" aria-label=\"Basic example",
-                "\t<button type=\"button\" class=\"btn btn-primary\">Left</button>",
-                "\t<button type=\"button\" class=\"btn btn-primary\">Middle</button>",
-                "\t<button type=\"button\" class=\"btn btn-primary\">Right</button>",
+                "\t<button type=\"button\" class=\"btn btn-primary\">Left",
+                "\t<button type=\"button\" class=\"btn btn-primary\">Middle",
+                "\t<button type=\"button\" class=\"btn btn-primary\">Right",
         ],
         "description": "b5-button-group"
     },
@@ -1140,10 +1133,10 @@
                     "\t\t<h5 class=\"card-title\">Card title</h5>",
                     "\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>",
                 "\t<ul class=\"list-group list-group-flush",
-                    "\t\t<li class=\"list-group-item\">An item</li>",
-                    "\t\t<li class=\"list-group-item\">A second item</li>",
-                    "\t\t<li class=\"list-group-item\">A third item</li>",
-                "\t</ul>",
+                    "\t\t<li class=\"list-group-item\">An item",
+                    "\t\t<li class=\"list-group-item\">A second item",
+                    "\t\t<li class=\"list-group-item\">A third item",
+                "\t",
                 "\t.card-body",
                     "\t\t<a href=\"#\" class=\"card-link\">Card link</a>",
                     "\t\t<a href=\"#\" class=\"card-link\">Another link</a>",
@@ -1159,14 +1152,14 @@
                     "\t\t<ul class=\"nav nav-tabs card-header-tabs",
                     "\t\t<li class=\"nav-item",
                         "\t\t\t<a class=\"nav-link active\" aria-current=\"true\" href=\"#\">Active</a>",
-                    "\t\t</li>",
+                    "\t\t",
                     "\t\t<li class=\"nav-item",
                         "\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                    "\t\t</li>",
+                    "\t\t",
                     "\t\t<li class=\"nav-item",
                         "\t\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
-                    "\t\t</li>",
-                    "\t\t</ul>",
+                    "\t\t",
+                    "\t\t",
                 "\t.card-body",
                     "\t\t<h5 class=\"card-title\">Special title treatment</h5>",
                     "\t\t<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>",
@@ -1183,14 +1176,14 @@
                     "\t\t<ul class=\"nav nav-pills card-header-pills",
                     "\t\t<li class=\"nav-item",
                         "\t\t\t<a class=\"nav-link active\" href=\"#\">Active</a>",
-                    "\t\t</li>",
+                    "\t\t",
                     "\t\t<li class=\"nav-item",
                         "\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                    "\t\t</li>",
+                    "\t\t",
                     "\t\t<li class=\"nav-item",
                         "\t\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
-                    "\t\t</li>",
-                    "\t\t</ul>",
+                    "\t\t",
+                    "\t\t",
                 "\t.card-body",
                     "\t\t<h5 class=\"card-title\">Special title treatment</h5>",
                     "\t\t<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>",
@@ -1409,13 +1402,13 @@
                     "\t\t.carousel-item",
                         "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...",
                 "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleControls\" data-bs-slide=\"prev",
-                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Previous</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Previous",
+                "\t",
                 "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleControls\" data-bs-slide=\"next",
-                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Next</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Next",
+                "\t",
         ],
         "description": "b5-carousel-controls"
     },
@@ -1425,9 +1418,9 @@
         "body": [
             "id=\"carouselExampleIndicators\" class=\"carousel slide\" data-bs-ride=\"carousel",
                 "\t.carousel-indicators",
-                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>",
-                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>",
-                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\"></button>",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\">",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\">",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\">",
                 "\t.carousel-inner",
                     "\t\t.carousel-item active",
                         "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...",
@@ -1436,13 +1429,13 @@
                     "\t\t.carousel-item",
                         "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...",
                 "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide=\"prev",
-                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Previous</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Previous",
+                "\t",
                 "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleIndicators\" data-bs-slide=\"next",
-                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Next</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Next",
+                "\t",
         ],
         "description": "b5-carousel-indicators"
     },
@@ -1452,9 +1445,9 @@
         "body": [
             "id=\"carouselExampleCaptions\" class=\"carousel slide\" data-bs-ride=\"carousel",
                 "\t.carousel-indicators",
-                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>",
-                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>",
-                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\"></button>",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\">",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\">",
+                    "\t\t<button type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide-to=\"2\" aria-label=\"Slide 3\">",
                 "\t.carousel-inner",
                     "\t\t.carousel-item active",
                         "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...",
@@ -1475,13 +1468,13 @@
                             "\t\t\t\t<p>Some representative placeholder content for the third slide.</p>",
                         "\t\t\t",
                 "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide=\"prev",
-                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Previous</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Previous",
+                "\t",
                 "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleCaptions\" data-bs-slide=\"next",
-                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Next</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Next",
+                "\t",
         ],
         "description": "b5-carousel-captions"
     },
@@ -1498,13 +1491,13 @@
                     "\t\t.carousel-item",
                         "\t\t\t<img src=\"https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap\" class=\"d-block w-100\" alt=\"...",
                 "\t<button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"prev",
-                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Previous</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Previous",
+                "\t",
                 "\t<button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"next",
-                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>",
-                    "\t\t<span class=\"visually-hidden\">Next</span>",
-                "\t</button>",
+                    "\t\t<span class=\"carousel-control-next-icon\" aria-hidden=\"true\">",
+                    "\t\t<span class=\"visually-hidden\">Next",
+                "\t",
         ],
         "description": "b5-carousel-crossfade"
     },
@@ -1512,7 +1505,7 @@
     "Bootstrap 5 Close Button": {
         "prefix": "b5-close-button",
         "body": [
-            "<button type=\"button\" class=\"btn-close ${2| ,btn-close-white|}\"${1| , disabled|} aria-label=\"Close\"></button>"
+            "<button type=\"button\" class=\"btn-close ${2| ,btn-close-white|}\"${1| , disabled|} aria-label=\"Close\">"
         ],
         "description": "b5-close-button"
     },
@@ -1526,7 +1519,7 @@
                 "\t</a>",
                 "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseExample\" aria-expanded=\"false\" aria-controls=\"collapseExample",
                     "\t\tButton with data-bs-target",
-                "\t</button>",
+                "\t",
             "</p>",
             ".collapse\" id=\"collapseExample",
                 "\t.card card-body",
@@ -1540,8 +1533,8 @@
         "body": [
             "<p>",
                 "\t<a class=\"btn btn-primary\" data-bs-toggle=\"collapse\" href=\"#multiCollapseExample1\" role=\"button\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample1\">Toggle first element</a>",
-                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#multiCollapseExample2\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample2\">Toggle second element</button>",
-                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\".multi-collapse\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample1 multiCollapseExample2\">Toggle both elements</button>",
+                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#multiCollapseExample2\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample2\">Toggle second element",
+                "\t<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\".multi-collapse\" aria-expanded=\"false\" aria-controls=\"multiCollapseExample1 multiCollapseExample2\">Toggle both elements",
             "</p>",
             ".row",
                 "\t.col",
@@ -1564,12 +1557,12 @@
             ".dropdown",
                 "\t<button class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark,link|} dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-bs-toggle=\"dropdown\" aria-expanded=\"false",
                     "\t\tDropdown button",
-                "\t</button>",
+                "\t",
                 "\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Action",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here",
+                "\t",
         ],
         "description": "b5-dropdown-button"
     },
@@ -1582,10 +1575,10 @@
                     "\t\tDropdown link",
                 "\t</a>",
                 "\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuLink",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
-                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
-                "\t</ul>",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Action",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action",
+                    "\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here",
+                "\t",
         ],
         "description": "b5-dropdown-anchor"
     },
@@ -1594,12 +1587,12 @@
         "prefix": "b5-list-group",
         "body": [
             "<ul class=\"list-group",
-                "\t<li class=\"list-group-item active\" aria-current=\"true\">An active item</li>",
-                "\t<li class=\"list-group-item\">A second item</li>",
-                "\t<li class=\"list-group-item\">A third item</li>",
-                "\t<li class=\"list-group-item\">A fourth item</li>",
-                "\t<li class=\"list-group-item disabled\" aria-disabled=\"true\">And a fifth one</li>",
-            "</ul>"
+                "\t<li class=\"list-group-item active\" aria-current=\"true\">An active item",
+                "\t<li class=\"list-group-item\">A second item",
+                "\t<li class=\"list-group-item\">A third item",
+                "\t<li class=\"list-group-item\">A fourth item",
+                "\t<li class=\"list-group-item disabled\" aria-disabled=\"true\">And a fifth one",
+            ""
         ],
         "description": "b5-list-group"
     },
@@ -1625,11 +1618,11 @@
             ".list-group",
                 "\t<button type=\"button\" class=\"list-group-item list-group-item-action active\" aria-current=\"true",
                     "\t\tThe current button",
-                "\t</button>",
-                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A second item</button>",
-                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A third button item</button>",
-                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A fourth button item</button>",
-                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\" disabled>A disabled button item</button>",
+                "\t",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A second item",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A third button item",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\">A fourth button item",
+                "\t<button type=\"button\" class=\"list-group-item list-group-item-action\" disabled>A disabled button item",
         ],
         "description": "b5-list-button"
     },
@@ -1638,12 +1631,12 @@
         "prefix": "b5-list-flush",
         "body": [
             "<ul class=\"list-group list-group-flush",
-                "\t<li class=\"list-group-item\">An item</li>",
-                "\t<li class=\"list-group-item\">A second item</li>",
-                "\t<li class=\"list-group-item\">A third item</li>",
-                "\t<li class=\"list-group-item\">A fourth item</li>",
-                "\t<li class=\"list-group-item\">And a fifth one</li>",
-            "</ul>"
+                "\t<li class=\"list-group-item\">An item",
+                "\t<li class=\"list-group-item\">A second item",
+                "\t<li class=\"list-group-item\">A third item",
+                "\t<li class=\"list-group-item\">A fourth item",
+                "\t<li class=\"list-group-item\">And a fifth one",
+            ""
         ],
         "description": "b5-list-flush"
     },
@@ -1652,9 +1645,9 @@
         "prefix": "b5-list-numbered",
         "body": [
             "<ol class=\"list-group list-group-numbered",
-                "\t<li class=\"list-group-item\">Cras justo odio</li>",
-                "\t<li class=\"list-group-item\">Cras justo odio</li>",
-                "\t<li class=\"list-group-item\">Cras justo odio</li>",
+                "\t<li class=\"list-group-item\">Cras justo odio",
+                "\t<li class=\"list-group-item\">Cras justo odio",
+                "\t<li class=\"list-group-item\">Cras justo odio",
             "</ol>"
         ],
         "description": "b5-list-numbered"
@@ -1664,10 +1657,10 @@
         "prefix": "b5-list-horizontal",
         "body": [
             "<ul class=\"list-group list-group-horizontal",
-                "\t<li class=\"list-group-item\">An item</li>",
-                "\t<li class=\"list-group-item\">A second item</li>",
-                "\t<li class=\"list-group-item\">A third item</li>",
-            "</ul>"
+                "\t<li class=\"list-group-item\">An item",
+                "\t<li class=\"list-group-item\">A second item",
+                "\t<li class=\"list-group-item\">A third item",
+            ""
         ],
         "description": "b5-list-horizontal"
     },
@@ -1724,7 +1717,7 @@
             "<!-- Button trigger modal -->",
             "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal",
                 "\tLaunch demo modal",
-            "</button>",
+            "",
 
             "\n<!-- Modal -->",
             ".modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true",
@@ -1732,14 +1725,14 @@
                     "\t\t.modal-content",
                         "\t\t\t.modal-header",
                             "\t\t\t\t<h5 class=\"modal-title\" id=\"exampleModalLabel\">Modal title</h5>",
-                            "\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\">",
                         "\t\t\t",
                         "\t\t\t.modal-body",
                             "\t\t\t\t...",
                         "\t\t\t",
                         "\t\t\t.modal-footer",
-                            "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>",
-                            "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save changes</button>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save changes",
                         "\t\t\t",
         ],
         "description": "b5-modal"
@@ -1751,7 +1744,7 @@
             "<!-- Button trigger modal -->",
             "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#staticBackdrop",
                 "\tLaunch static backdrop modal",
-            "</button>",
+            "",
 
             "\n<!-- Modal -->",
             ".modal fade\" id=\"staticBackdrop\" data-bs-backdrop=\"static\" data-bs-keyboard=\"false\" tabindex=\"-1\" aria-labelledby=\"staticBackdropLabel\" aria-hidden=\"true",
@@ -1759,14 +1752,14 @@
                     "\t\t.modal-content",
                         "\t\t\t.modal-header",
                             "\t\t\t\t<h5 class=\"modal-title\" id=\"staticBackdropLabel\">Modal title</h5>",
-                            "\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\">",
                         "\t\t\t",
                         "\t\t\t.modal-body",
                             "\t\t\t\t...",
                         "\t\t\t",
                         "\t\t\t.modal-footer",
-                            "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>",
-                            "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Understood</button>",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close",
+                            "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Understood",
                         "\t\t\t",
         ],
         "description": "b5-modal-static-backdrop"
@@ -1778,17 +1771,17 @@
             "<ul class=\"nav ${1| ,justify-content-center,justify-content-end|} ${2| ,flex-column|}",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
-                "\t</li>",
-            "</ul>"
+                "\t",
+            ""
         ],
         "description": "b5-nav-base"
     },
@@ -1812,17 +1805,17 @@
             "<ul class=\"nav nav-tabs ${1| ,nav-fill,nav-justified|}",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
-                "\t</li>",
-            "</ul>"
+                "\t",
+            ""
         ],
         "description": "b5-nav-tab"
     },
@@ -1833,17 +1826,17 @@
             "<ul class=\"nav nav-pills ${1| ,nav-fill,nav-justified|}",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Active</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                "\t</li>",
+                "\t",
                 "\t<li class=\"nav-item",
                     "\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
-                "\t</li>",
-            "</ul>"
+                "\t",
+            ""
         ],
         "description": "b5-nav-pill"
     },
@@ -1855,34 +1848,34 @@
                 "\t.container-fluid",
                     "\t\t<a class=\"navbar-brand\" href=\"#\">Navbar</a>",
                     "\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation",
-                        "\t\t\t<span class=\"navbar-toggler-icon\"></span>",
-                    "\t\t</button>",
+                        "\t\t\t<span class=\"navbar-toggler-icon\">",
+                    "\t\t",
                     "\t\t.collapse navbar-collapse\" id=\"navbarSupportedContent",
                         "\t\t\t<ul class=\"navbar-nav me-auto mb-2 mb-lg-0",
                             "\t\t\t\t<li class=\"nav-item",
                                 "\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>",
-                            "\t\t\t\t</li>",
+                            "\t\t\t\t",
                             "\t\t\t\t<li class=\"nav-item",
                                 "\t\t\t\t\t<a class=\"nav-link\" href=\"#\">Link</a>",
-                            "\t\t\t\t</li>",
+                            "\t\t\t\t",
                             "\t\t\t\t<li class=\"nav-item dropdown",
                                 "\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false",
                                     "\t\t\t\t\t\tDropdown",
                                 "\t\t\t\t\t</a>",
                                 "\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown",
-                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
-                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
-                                    "\t\t\t\t\t\t<li><hr class=\"dropdown-divider\"></li>",
-                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
-                                "\t\t\t\t\t</ul>",
-                            "\t\t\t\t</li>",
+                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action",
+                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action",
+                                    "\t\t\t\t\t\t<li><hr class=\"dropdown-divider\">",
+                                    "\t\t\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here",
+                                "\t\t\t\t\t",
+                            "\t\t\t\t",
                             "\t\t\t\t<li class=\"nav-item",
                                 "\t\t\t\t\t<a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>",
-                            "\t\t\t\t</li>",
-                        "\t\t\t</ul>",
+                            "\t\t\t\t",
+                        "\t\t\t",
                         "\t\t\t<form class=\"d-flex",
                             "\t\t\t\t<input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search",
-                            "\t\t\t\t<button class=\"btn btn-outline-success\" type=\"submit\">Search</button>",
+                            "\t\t\t\t<button class=\"btn btn-outline-success\" type=\"submit\">Search",
                         "\t\t\t</form>",
             "</nav>"
         ],
@@ -1897,24 +1890,24 @@
             "</a>",
             "<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"offcanvas\" data-bs-target=\"#offcanvasExample\" aria-controls=\"offcanvasExample",
                 "\tButton with data-bs-target",
-            "</button>",
+            "",
 
             "\n.offcanvas offcanvas-${1|start,end,top,bottom|}\" data-bs-scroll=\"${2|true,false|}\" data-bs-backdrop=\"${3|true,false|}\" tabindex=\"-1\" id=\"offcanvasExample\" aria-labelledby=\"offcanvasExampleLabel",
                 "\t.offcanvas-header",
                     "\t\t<h5 class=\"offcanvas-title\" id=\"offcanvasExampleLabel\">Offcanvas</h5>",
-                    "\t\t<button type=\"button\" class=\"btn-close text-reset\" data-bs-dismiss=\"offcanvas\" aria-label=\"Close\"></button>",
+                    "\t\t<button type=\"button\" class=\"btn-close text-reset\" data-bs-dismiss=\"offcanvas\" aria-label=\"Close\">",
                 "\t.offcanvas-body",
                     "\t\t",
                         "\t\t\tSome text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.",
                     "\t\t.dropdown mt-3",
                         "\t\t\t<button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-bs-toggle=\"dropdown",
                             "\t\t\t\tDropdown button",
-                        "\t\t\t</button>",
+                        "\t\t\t",
                         "\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton",
-                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action</a></li>",
-                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action</a></li>",
-                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here</a></li>",
-                        "\t\t\t</ul>",
+                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Action",
+                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Another action",
+                            "\t\t\t\t<li><a class=\"dropdown-item\" href=\"#\">Something else here",
+                        "\t\t\t",
         ],
         "description": "b5-offcanvas"
     },
@@ -1926,14 +1919,14 @@
                 "\t<ul class=\"pagination justify-content-${1|start,center,end|}",
                     "\t\t<li class=\"page-item disabled",
                         "\t\t\t<a class=\"page-link\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Previous</a>",
-                    "\t\t</li>",
-                    "\t\t<li class=\"page-item active\"><a class=\"page-link\" href=\"#\">1</a></li>",
-                    "\t\t<li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>",
-                    "\t\t<li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>",
+                    "\t\t",
+                    "\t\t<li class=\"page-item active\"><a class=\"page-link\" href=\"#\">1",
+                    "\t\t<li class=\"page-item\"><a class=\"page-link\" href=\"#\">2",
+                    "\t\t<li class=\"page-item\"><a class=\"page-link\" href=\"#\">3",
                     "\t\t<li class=\"page-item",
                         "\t\t\t<a class=\"page-link\" href=\"#\">Next</a>",
-                    "\t\t</li>",
-                "\t</ul>",
+                    "\t\t",
+                "\t",
             "</nav>"
         ],
         "description": "b5-pagination"
@@ -1942,7 +1935,7 @@
     "Bootstrap 5 Popover": {
         "prefix": "b5-popover",
         "body": [
-            "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"popover\" data-bs-placement=\"${1|top,right,bottom,left|}\" title=\"${2:Popover title}\" data-bs-content=\"${3:And here's some amazing content. It's very engaging. Right?} ${4:Click to toggle popover}</button>",
+            "<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"popover\" data-bs-placement=\"${1|top,right,bottom,left|}\" title=\"${2:Popover title}\" data-bs-content=\"${3:And here's some amazing content. It's very engaging. Right?} ${4:Click to toggle popover}",
 
             "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
             "<script>",
@@ -1975,8 +1968,8 @@
         "prefix": "b5-popover-disable",
         "body": [
             "<span class=\"d-inline-block\" tabindex=\"0\" data-bs-toggle=\"popover\" data-bs-placement=\"${1|top,right,bottom,left|}\" data-bs-trigger=\"hover focus\" data-bs-content=\"${2:Disabled popover}",
-                "\t<button class=\"btn btn-primary\" type=\"button\" disabled>Disabled button</button>",
-            "</span>",
+                "\t<button class=\"btn btn-primary\" type=\"button\" disabled>Disabled button",
+            "",
 
             "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
             "<script>",
@@ -2013,7 +2006,7 @@
         "prefix": "b5-spinner",
         "body": [
             ".spinner-border text-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"status",
-                "\t<span class=\"visually-hidden ${2:Loading...}</span>",
+                "\t<span class=\"visually-hidden ${2:Loading...}",
         ],
         "description": "b5-spinner"
     },
@@ -2022,7 +2015,7 @@
         "prefix": "b5-spinner-growing",
         "body": [
             ".spinner-grow text-${1|primary,secondary,success,danger,warning,info,light,dark|}\" role=\"status",
-                "\t<span class=\"visually-hidden ${2:Loading...}</span>",
+                "\t<span class=\"visually-hidden ${2:Loading...}",
         ],
         "description": "b5-spinner-growing"
     },
@@ -2031,13 +2024,13 @@
         "prefix": "b5-spinner-buttons",
         "body": [
             "<button class=\"btn btn-primary\" type=\"button\" disabled>",
-            "\t<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
-            "\t<span class=\"visually-hidden\">Loading...</span>",
-            "</button>",
+            "\t<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\">",
+            "\t<span class=\"visually-hidden\">Loading...",
+            "",
             "<button class=\"btn btn-primary\" type=\"button\" disabled>",
-            "\t<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+            "\t<span class=\"spinner-border spinner-border-sm\" role=\"status\" aria-hidden=\"true\">",
             "\tLoading...",
-            "</button>"
+            ""
         ],
         "description": "b5-spinner-buttons"
     },
@@ -2046,13 +2039,13 @@
         "prefix": "b5-spinner-growing-buttons",
         "body": [
             "<button class=\"btn btn-primary\" type=\"button\" disabled>",
-                "\t<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>",
-                "\t<span class=\"visually-hidden\">Loading...</span>",
-            "</button>",
+                "\t<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\">",
+                "\t<span class=\"visually-hidden\">Loading...",
+            "",
             "<button class=\"btn btn-primary\" type=\"button\" disabled>",
-                "\t<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\"></span>",
+                "\t<span class=\"spinner-grow spinner-grow-sm\" role=\"status\" aria-hidden=\"true\">",
                 "\tLoading...",
-            "</button>"
+            ""
         ],
         "description": "b5-spinner-growing-buttons"
     },
@@ -2060,7 +2053,7 @@
     "Bootstrap 5 Toasts": {
         "prefix": "b5-toast",
         "body": [
-            "<button type=\"button\" onclick=\"showToast()\" class=\"btn btn-primary\" id=\"liveToastBtn\">Show live toast</button>",
+            "<button type=\"button\" onclick=\"showToast()\" class=\"btn btn-primary\" id=\"liveToastBtn\">Show live toast",
 
             "\n.position-fixed bottom-0 end-0 p-3\" style=\"z-index: 11",
                 "\tid=\"liveToast\" class=\"toast hide\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true",
@@ -2068,7 +2061,7 @@
                         "\t\t\t<img src=\"...\" class=\"rounded me-2\" alt=\"...",
                         "\t\t\t<strong class=\"me-auto\">Bootstrap</strong>",
                         "\t\t\t<small>11 mins ago</small>",
-                        "\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>",
+                        "\t\t\t<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"toast\" aria-label=\"Close\">",
                     "\t\t.toast-body",
                         "\t\t\tHello, world! This is a toast message.",
 
@@ -2087,7 +2080,7 @@
     "Bootstrap 5 Toasts Custom": {
         "prefix": "b5-toast-custom",
         "body": [
-            "<button type=\"button\" onclick=\"showToast()\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark|}\" id=\"liveToastBtn\">Show live toast</button>",
+            "<button type=\"button\" onclick=\"showToast()\" class=\"btn btn-${1|primary,secondary,success,danger,warning,info,light,dark|}\" id=\"liveToastBtn\">Show live toast",
 
             "\n.position-fixed bottom-0 end-0 p-3\" style=\"z-index: 11",
                 "\tid=\"liveToast\" class=\"toast align-items-center text-${2|white,dark|} bg-${1|primary,secondary,success,danger,warning,info,light,dark|} border-0\" role=\"alert\" aria-live=\"assertive\" aria-atomic=\"true",
@@ -2095,7 +2088,7 @@
                         "\t\t\t.toast-body",
                             "\t\t\t\tHello, world! This is a toast message.",
                         "\t\t\t",
-                        "\t\t\t<button type=\"button\" class=\"btn-close btn-close-white me-2 m-auto\" data-bs-dismiss=\"toast\" aria-label=\"Close\"></button>",
+                        "\t\t\t<button type=\"button\" class=\"btn-close btn-close-white me-2 m-auto\" data-bs-dismiss=\"toast\" aria-label=\"Close\">",
 
             "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
             "<script>",
@@ -2114,7 +2107,7 @@
         "body": [
             "<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"tooltip\" data-bs-placement=\"${1|top,right,bottom,left|}\" title=\"Tooltip on ${1|top,right,bottom,left|}",
                 "Tooltip on ${1|top,right,bottom,left|}",
-            "</button>",
+            "",
 
             "\n<!-- Call this script after bootstrap.bundle.min.js CDN -->",
             "<script>",
