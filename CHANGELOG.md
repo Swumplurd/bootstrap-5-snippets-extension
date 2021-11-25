@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Snippets for pugjs 😁
+- colaborate if you want, it's a hard work...
+
 ---
 
 ## [1.3.0]  - 2021-08-28
