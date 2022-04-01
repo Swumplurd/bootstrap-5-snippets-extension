@@ -7,6 +7,10 @@
 
 ---
 
+## [1.4.0]  - 2021-08-28
+### Added
+- added support for blade
+
 ## [1.3.0]  - 2021-08-28
 ### Added
 - functionality added to b5-button snippet

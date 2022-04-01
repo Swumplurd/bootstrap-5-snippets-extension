@@ -165,6 +165,10 @@ It is necessary to add customization and utility of some snippets.
 ## Release Notes
 
 ---
+### 1.4.0
+- Added Suport in `.blade.php` files
+
+---
 ### 1.3.0
 - Added Suport in `.jsx` and `.tsx` files
 
